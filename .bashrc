@@ -11,7 +11,9 @@
 # Disable ctrl-s and ctrl-q.
 
 aliasrc="/home/nlantau/.aliasrc"
+bashenv="/home/nlantau/.bashenv"
 
+[[ -f $bashenv ]] && source $bashenv
 [[ -f $aliasrc ]] && source $aliasrc
 
 stty -ixon 

@@ -1,0 +1,84 @@
+#!/bin/sh
+# nlantau, 2021-06-27
+
+# Color stdout
+colorflag="--color=auto"
+
+# Vim
+alias vim="$EDITOR"
+alias vi="$EDITOR"
+alias v="$EDITOR"
+alias n="nvim"
+
+# Editor commands
+alias vz="$EDITOR $ZDOTDIR/.zshrc"
+alias vn="$EDITOR $MYVIMRC"
+alias nn="nvim $XDG_CONFIG_HOME/nvim/init.vim"
+
+alias ali="$EDITOR $ZDOTDIR/aliasrc"
+alias ve="$EDITOR $ZDOTDIR/.zshenv"
+alias vix="$EDITOR $HOME/.xinitrc"
+
+# wm
+alias nhc="nvim $HOME/.xmonad/xmonad.hs"
+alias hc="$EDITOR $HOME/.xmonad/xmonad.hs"
+alias vc="$EDITOR $XDG_CONFIG_HOME/dwm/config.def.h"
+alias vi3="$EDITOR $XDG_CONFIG_HOME/i3/config"
+
+# cd alias
+alias cg="cd $GITHUBDIR"
+alias ctf="cd $GITHUBDIR/CTF2021"
+alias sd="cd $XDG_CONFIG_HOME/scripts"
+alias cc="cd $XDG_CONFIG_HOME"
+alias da="cd $DROPBOXDIR"
+alias sa="cd $SCHOOLDIR"
+alias down="cd ~/Hämtningar"
+
+# Pacman
+alias p="sudo pacman -Syu"
+
+# Bluetooth
+alias b="bluetoothctl"
+
+# Current courses
+alias c1="cd $SCHOOLDIR/S_Utmanande_Matematik"
+alias c2="cd $SCHOOLDIR/8_FY263A_VT21_Sensor_Technology_for_Embedded_Systems"
+
+# Grep
+alias grep="grep ${colorflag}"
+
+# xclip
+alias xclip="xclip -selection clipboard"
+
+# Applies to UNIX & Linux
+alias l="ls ${colorflag} --group-directories-first"
+alias ls="ls ${colorflag} --group-directories-first"
+alias lss="du -ah"
+alias la="ls -a ${colorflag} --group-directories-first"
+alias ll="ls -lahF ${colorflag} --group-directories-first"
+alias c="clear"
+alias ..="cd .."
+
+# Git bare
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME"
+alias ds="dotfiles status"
+alias dad="dotfiles add -u"
+#alias dp="dotfiles push dotfiles --mirror"
+alias dp="dotfiles push origin master"
+
+function dc() {
+  dotfiles commit -m "${@:-update}";
+}
+
+# Git - General
+alias gad="git add -u"
+alias gs="git status"
+alias gc="git commit -m \"minor changes\""
+alias gp="git push"
+alias gco="git checkout"
+
+
+
+
+
+
