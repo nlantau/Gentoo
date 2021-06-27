@@ -8,34 +8,23 @@ colorflag="--color=auto"
 alias vim="$EDITOR"
 alias vi="$EDITOR"
 alias v="$EDITOR"
-alias n="nvim"
 
 # Editor commands
-alias vz="$EDITOR $ZDOTDIR/.zshrc"
 alias vn="$EDITOR $MYVIMRC"
-alias nn="nvim $XDG_CONFIG_HOME/nvim/init.vim"
 
-alias ali="$EDITOR $ZDOTDIR/aliasrc"
-alias ve="$EDITOR $ZDOTDIR/.zshenv"
+alias ali="$EDITOR $HOME/.aliasrc"
 alias vix="$EDITOR $HOME/.xinitrc"
 
 # wm
-alias nhc="nvim $HOME/.xmonad/xmonad.hs"
-alias hc="$EDITOR $HOME/.xmonad/xmonad.hs"
 alias vc="$EDITOR $XDG_CONFIG_HOME/dwm/config.def.h"
-alias vi3="$EDITOR $XDG_CONFIG_HOME/i3/config"
 
 # cd alias
 alias cg="cd $GITHUBDIR"
-alias ctf="cd $GITHUBDIR/CTF2021"
 alias sd="cd $XDG_CONFIG_HOME/scripts"
 alias cc="cd $XDG_CONFIG_HOME"
 alias da="cd $DROPBOXDIR"
 alias sa="cd $SCHOOLDIR"
 alias down="cd ~/Hämtningar"
-
-# Pacman
-alias p="sudo pacman -Syu"
 
 # Bluetooth
 alias b="bluetoothctl"
@@ -63,7 +52,6 @@ alias ..="cd .."
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME"
 alias ds="dotfiles status"
 alias dad="dotfiles add -u"
-#alias dp="dotfiles push dotfiles --mirror"
 alias dp="dotfiles push origin master"
 
 function dc() {
