@@ -113,8 +113,8 @@ static const char *brdowncmd[] = { "sudo", "xbacklight", "-dec", "10", NULL };
 static const char *brlowcmd[] = { "sudo", "xbacklight", "-set", "1", NULL };
 
 /* Power */
-//static const char *susp[] = {"sudo","systemctl","suspend",NULL};
-static const char *susp[] = {"power", NULL};
+static const char *susp[] = {"loginctl","suspend",NULL};
+//static const char *susp[] = {"power", NULL};
 
 
 static Key keys[] = {
