@@ -11,7 +11,7 @@ alias v="$EDITOR"
 
 # Editor commands
 alias vn="$EDITOR $MYVIMRC"
-
+alias ve="$EDITOR $HOME/.bashenv"
 alias ali="$EDITOR $HOME/.aliasrc"
 alias vix="$EDITOR $HOME/.xinitrc"
 

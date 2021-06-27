@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/bin/sh
 
 # Default programs
 export EDITOR="vim"
@@ -9,16 +9,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 
-# Zsh environment variables
-#export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-#export HISTFILE="$ZDOTDIR/.zhistory"
-#export HISTSIZE=10000
-#export SAVEHIST=10000
-
 # Special
 export DROPBOXDIR="$HOME/Dropbox"
 export GITHUBDIR="$HOME/Github"
-export VIRENVDIR="$HOME/.virtualenvs"
 export SCHOOLDIR="$DROPBOXDIR/Skola/7_mot_ingenjor/1_Current"
 
 # Vim
