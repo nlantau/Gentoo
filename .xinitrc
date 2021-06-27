@@ -5,6 +5,8 @@ xset -dpms &
 
 setxkbmap se &
 
+feh --bg-scale /home/nlantau/gt.png
+
 exec /home/nlantau/.config/slstatus/slstatus &
 
 exec dwm
