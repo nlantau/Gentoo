@@ -50,4 +50,4 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
 
 LS_COLORS='di=1;35:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90:*.png=35:*.gif=36:*.jpg=35:*.c=92:*.jar=33:*.py=93:*.h=90:*.txt=94:*.doc=90:*.docx=90:*.odt=90:*.csv=90:*.xlsx=90:*.xlsm=90:*.rb=31:*.cpp=92:*.sh=92:*.html=96:*.zip=4;33:*.tar.gz=4;33:*.mp4=90:*.mp3=90'
 export LS_COLORS
-pathprepend $HOME/.scripts
+pathappend $HOME/.config/scripts

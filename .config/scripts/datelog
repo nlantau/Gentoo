@@ -1,0 +1,27 @@
+#!/bin/sh
+# nlantau, 2021-05-09
+# Log every minute the computer is on. New logfile every day.
+
+path="/home/nlantau/.config/scripts/log_data"
+filename="$(date '+%x').log"
+full_path="$path/$filename"
+
+file=$(ls -lt $path | grep -v totalt | head -n1 | grep -Eo '[0-9-]{10}.log')
+minutes=$(cat $path/$file | wc -l)
+
+if [[ -n $1 ]]; then
+  echo "> Testing..."
+  echo "File   : $file"
+  echo "Minutes: $minutes"
+  exit 1
+
+fi
+
+if ! [[ -f $full_path ]];then
+  notify-send "Du var vid datorn $minutes minuter igår"
+  touch $full_path
+fi
+
+
+
+date '+%X' >> $full_path
