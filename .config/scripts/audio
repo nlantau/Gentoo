@@ -1,0 +1,11 @@
+#!/bin/sh
+# nlantau, 2021-04-23
+# Updated: 2021-05-06
+
+PERC=$(amixer get Master | tail -n 1 | grep -Eo '[0-9]+' | head -n2 | tail -n1)
+MUTED=$(amixer get Master | tail -n 1 | grep -Eo '\[on\]')
+
+( [[ $? -eq 0 ]] && echo $PERC ) || echo "0"
+
+# Good for 2 digits, not for 3. Or vice versa
+# PERC=$(amixer get Master | awk '/Mono:/ {print substr($4,2,3)}')

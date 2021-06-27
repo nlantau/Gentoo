@@ -1,0 +1,61 @@
+#!/bin/sh
+# nlantau, 2021-04-24
+
+
+function setting_laptop {
+  xrandr --output \
+    eDP-1 --mode 1920x1080 --output \
+    DP-3 --off --output DP-1 --off >/dev/null 2>&1
+    [[ $? -eq 0 ]] || notify-send "Laptop error"
+
+}
+
+function setting_dual { 
+  xrandr --output \
+    eDP-1 --off --output \
+    DP-3 --mode 1920x1080 --output \
+    DP-1 --mode 1920x1080 --right-of DP-3 >/dev/null 2>&1
+    [[ $? -eq 0 ]] || notify-send "Not Connected"
+}
+
+function setting_triple {  
+  # Modified to be used during labs in school
+  xrandr --output \
+    eDP-1 --mode 1920x1080 --output \
+    DP-3 --mode 1920x1080 --right-of \
+    eDP-1 --output \
+    DP-1 --mode 1920x1080 --right-of DP-3 >/dev/null 2>&1
+    [[ $? -eq 0 ]] || notify-send "Not Connected"
+}
+
+function keyrepeat_xcape {
+  # key rate, replay
+  xset r rate 300 50 || notify-send "xset rate error"
+  xset b off || notify-send "xset bell error"
+
+  # Screensaver off
+  xset s off
+  xset -dpms
+
+  # set SE and Caps -> Ctrl
+  setxkbmap se -option 'caps:ctrl_modifier' || notify-send "Setting SE error"
+}
+
+
+
+case "$1" in
+  "laptop")
+    setting_laptop ;
+    keyrepeat_xcape ;
+    ;;
+  "dual")
+    setting_dual ;
+    keyrepeat_xcape ;
+    ;;
+  "triple")
+    setting_triple ;
+    keyrepeat_xcape ;
+    ;;
+  *)
+    notify-send "Multi Monitor Error";;
+esac
