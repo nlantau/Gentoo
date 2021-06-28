@@ -5,7 +5,7 @@ xset -dpms &
 
 setxkbmap se &
 
-feh --bg-scale /home/nlantau/gt.png
+feh --bg-scale /home/nlantau/Bilder/gt_2.jpg
 
 exec /home/nlantau/.config/slstatus/slstatus &
 
