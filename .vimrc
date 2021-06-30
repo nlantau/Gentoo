@@ -16,14 +16,11 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
-"Plug 'dkasak/gruvbox'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'mboughaba/i3config.vim'
 call plug#end()
 
 
@@ -66,15 +63,6 @@ augroup END
 " ----- au Make -------------------------------------------------------------
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
-" ----- Markdown ------------------------------------------------------------
-augroup myMD
-  au!
-  au FileType md setlocal expandtab
-  au FileType md setlocal tabstop=8
-  au FileType md setlocal shiftwidth=2
-  au FileType md setlocal softtabstop=2
-augroup END
-
 " ----- au sh ---------------------------------------------------------------
 augroup mySh
   au!
@@ -94,16 +82,6 @@ augroup myC
   au FileType c setlocal softtabstop=2
 augroup END
 
-" ----- Haskell -------------------------------------------------------------
-let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
-let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
-let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
-let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
-let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
-let g:haskell_classic_highlighting = 1
-
 " ----- au python -----------------------------------------------------------
 augroup myPython
   au!
@@ -117,7 +95,6 @@ augroup END
 autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
 nnoremap <Leader>vv :vsplit $MYVIMRC<CR>
 
-nnoremap ' `
 inoremap jk <ESC>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <Leader><ESC> :noh<CR><ESC>
@@ -126,7 +103,6 @@ nnoremap <Leader><ESC> :noh<CR><ESC>
 nnoremap <Leader><Leader> :w<CR>
 
 " ----- Save And Compile pdf  -----------------------------------------
-nnoremap <C-r>r :w<CR>:!pandoc -V geometry:margin=0.1in -o %:r.pdf %<Enter><CR>
 nnoremap <C-r>l :w<CR>:!pdflatex %<Enter><CR>
 
 " ----- Navigation ----------------------------------------------------
