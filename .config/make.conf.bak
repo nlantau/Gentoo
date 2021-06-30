@@ -1,0 +1,44 @@
+# These settings were set by the catalyst build script that automatically
+# built this stage.
+# Please consult /usr/share/portage/config/make.conf.example for a more
+# detailed example.
+
+COMMON_FLAGS="-march=skylake -O2 -pipe"
+
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+
+USE="X elogind xinerama udev dbus git crypt alc \
+     xrandr upower x264 imlib libpng apng postproc \
+     networkmanager usb matroska man jpeg png gif \
+     ffmpeg encode curl bzip2 savedconfig bash-completion \
+     alsa pulseaudio mp3 mp4 vim-syntax pdf latex \
+     bluetooth wifi aac \
+     -gnome -gtk -kde -plasma -ios -ipod -emacs -xemacs \
+     -dvd -dvdr -dv -coreaudio -scanner -a52 \
+     -systemd -aqua -css -cups"
+
+MAKEOPTS="-j3"
+EMERGE_DEFAULT_OPTS="--jobs 4 --load-average 2.7"
+
+VIDEO_CARDS="intel i965 iris nvidia"
+INPUT_DEVICES="libinput synaptics"
+
+ACCEPT_LICENSE="*"
+ACCEPT_KEYWORDS="~amd64"
+
+GRUB_PLATFORMS="efi-64"
+
+
+# NOTE: This stage was built with the bindist Use flag enabled
+PORTDIR="/var/db/repos/gentoo"
+DISTDIR="/var/cache/distfiles"
+PKGDIR="/var/cache/binpkgs"
+
+# This sets the language of build output to English.
+# Please keep this setting intact when reporting bugs.
+LC_MESSAGES=C
+
+GENTOO_MIRRORS="https://mirrors.dotsrc.org/gentoo/ https://mirrors.ircam.fr/pub/gentoo-distfiles/ https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/"
