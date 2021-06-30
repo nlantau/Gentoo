@@ -1,6 +1,7 @@
 #!/bin/sh
 # nlantau, 2021-05-09
 # Log every minute the computer is on. New logfile every day.
+# In conjuction with proper cronjob
 
 path="/home/nlantau/.config/scripts/log_data"
 filename="$(date '+%x').log"
