@@ -1,4 +1,5 @@
 #!/bin/sh
+# nlantau, 2021-06-27
 
 # Default programs
 export EDITOR="vim"
