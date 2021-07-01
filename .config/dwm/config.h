@@ -99,7 +99,7 @@ static const char *spotify[] = {"spotifyterm", NULL};
 static const char *enabledualmonitors[]  = { "/home/nlantau/.config/scripts/monitors","dual", NULL };
 static const char *enabletriplemonitors[]  = { "/home/nlantau/.config/scripts/monitors","triple", NULL };
 static const char *disabledualmonitors[]  = { "/home/nlantau/.config/scripts/monitors","laptop", NULL };
-static const char *locker[] = {"lock", NULL};
+static const char *locker[] = {"slock", NULL};
 
 /* Sound */
 static const char *mutecmd[] = { "/usr/bin/pactl","set-sink-mute","0","toggle", NULL };
@@ -113,7 +113,8 @@ static const char *brdowncmd[] = { "sudo", "xbacklight", "-dec", "10", NULL };
 static const char *brlowcmd[] = { "sudo", "xbacklight", "-set", "1", NULL };
 
 /* Power */
-static const char *susp[] = {"loginctl","suspend",NULL};
+static const char *susp[] = {"/home/nlantau/.config/scripts/susp_lock",NULL};
+//static const char *susp[] = {"sudo","s2ram",NULL};
 //static const char *susp[] = {"power", NULL};
 
 
