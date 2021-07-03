@@ -1,0 +1,21 @@
+#!/bin/sh
+# nlantau, 2021-07-04
+
+PDIR="/etc/portage"
+BDIR="${XDG_CONFIG_HOME}/Gentoo_configs"
+
+PUSE="${PDIR}/package.use/local"
+LF_CONF="${PDIR}/savedconfig/sys-kernel/linux-firmware-20210629"
+MAKE_CONF="${PDIR}/make.conf"
+LAYMAN_CONF="${PDIR}/repos.conf/layman.conf"
+
+{ sudo cp ${PUSE} ${BDIR}/local.bak && \
+sudo cp ${LF_CONF} ${BDIR}/linux-firmware-20210629.bak && \
+sudo cp ${MAKE_CONF} ${BDIR}/make.conf.bak && \
+sudo cp ${LAYMAN_CONF} ${BDIR}/layman.conf.bak && \
+notify-send "Gentoo config files backup completed" \
+; } || notify-send "Error copying Gentoo config files"
+
+sudo chown -R $USER:$USER ${BDIR} || notify-send "Error changing owner to Gentoo config files"
+
+
