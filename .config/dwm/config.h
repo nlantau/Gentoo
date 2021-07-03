@@ -119,55 +119,73 @@ static const char *susp[] = {"/home/nlantau/.config/scripts/susp_lock",NULL};
 
 
 static Key keys[] = {
-	/* modifier                     key        function        argument */
+
+	/* Kill, Quit & Power                                               */
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY,                       XK_q,      killclient,     {0} },
+	{ MODKEY,                       XK_z,      spawn,          {.v = locker } },
+        { MODALT|ShiftMask,             XK_x,      spawn,          {.v = susp } },         
+
+        /* Spawn cmd                                                        */
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+
+        /* Layout                                                           */
+	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },             /* Will be master tile */
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[4]} },
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_q,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_z,      spawn,          {.v = locker } },
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+	{ MODKEY,                       XK_Tab,    view,           {0} },
+
+        /* Focus                                                            */
+	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+        { MODKEY|ControlMask,           XK_space,  focusmaster,    {0} },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+
+        /* Gaps                                                             */
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_plus,   setgaps,        {.i = +1 } },
-        { MODALT,                       XK_l,      spawn,          {.v = brlowcmd } },
+	{ MODKEY|ShiftMask,             XK_plus,   setgaps,        {.i = 0  } },
+
+        /* Scratchpads                                                      */
 	{ MODALT,                       XK_a,      togglescratch,  {.i = 1  } },
 	{ MODALT,                       XK_u,      togglescratch,  {.i = 0  } },
 	{ MODALT,                       XK_y,      togglescratch,  {.i = 2  } },
+
+        /* Spawn scripts                                                    */
         { MODALT|ShiftMask,             XK_s,      spawn,          {.v = disabledualmonitors } },         
-        { MODALT|ShiftMask,             XK_j,      spawn,          {.v = intellij } },
-        { MODALT|ShiftMask,             XK_m,      spawn,          {.v = spotify } },
-        { MODALT|ShiftMask,             XK_p,      spawn,          {.v = flame } },         
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
         { MODALT|ShiftMask,             XK_d,      spawn,          {.v = enabledualmonitors } },         
         { MODALT|ShiftMask,             XK_t,      spawn,          {.v = enabletriplemonitors } },         
-        { MODALT|ShiftMask,             XK_x,      spawn,          {.v = susp } },         
-	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY|ShiftMask,             XK_plus,   setgaps,        {.i = 0  } },
-	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },             /* Will be master tile */
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-        { MODKEY|ControlMask,           XK_space,  focusmaster,    {0} },
+        { MODALT|ShiftMask,             XK_p,      spawn,          {.v = flame } },         
+        //{ MODALT,                       XK_l,      spawn,          {.v = brlowcmd } },
+        //{ MODALT|ShiftMask,             XK_j,      spawn,          {.v = intellij } },
+        //{ MODALT|ShiftMask,             XK_m,      spawn,          {.v = spotify } },
+
+        /* XF86                                                             */
         { 0,                            XF86XK_AudioMute,          spawn, {.v = mutecmd } },
         { 0,                            XF86XK_AudioMicMute,       spawn, {.v = miccmd } },
-        { 0,                            XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
-        { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
-        { 0,                            XF86XK_MonBrightnessUp, spawn, {.v = brupcmd} },
-        { 0,                            XF86XK_MonBrightnessDown, spawn, {.v = brdowncmd} },
+        { 0,                            XF86XK_AudioLowerVolume,   spawn, {.v = voldowncmd } },
+        { 0,                            XF86XK_AudioRaiseVolume,   spawn, {.v = volupcmd } },
+        { 0,                            XF86XK_MonBrightnessUp,    spawn, {.v = brupcmd} },
+        { 0,                            XF86XK_MonBrightnessDown,  spawn, {.v = brdowncmd} },
+
+        /* Tags                                                             */
+	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
