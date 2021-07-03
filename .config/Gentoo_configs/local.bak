@@ -1,0 +1,82 @@
+# package.use
+>=media-libs/harfbuzz-2.8.1 icu #-introspection
+>=app-text/texlive-core-2021 xetex
+#>=app-text/xmlto-0.0.28-r6 -latex
+# package.use
+#>=app-text/xmlto-0.0.28-r6 -latex
+# required by x11-drivers/nvidia-drivers-470.42.01::gentoo[X]
+# required by media-libs/nv-codec-headers-11.0.10.0::gentoo
+# required by media-video/ffmpeg-4.4::gentoo[video_cards_nvidia]
+# required by media-plugins/alsa-plugins-1.2.2::gentoo[ffmpeg]
+# required by media-sound/pulseaudio-13.0-r1::gentoo[alsa-plugin,alsa]
+# required by media-sound/pulseaudio (argument)
+>=media-libs/libglvnd-1.3.3 abi_x86_32
+# required by x11-libs/libXext-1.3.4::gentoo
+# required by media-libs/libglvnd-1.3.3::gentoo[X]
+# required by media-libs/mesa-21.1.3::gentoo
+# required by media-libs/libepoxy-1.5.8::gentoo[egl]
+# required by x11-libs/gtk+-3.24.29::gentoo
+# required by x11-themes/adwaita-icon-theme-40.1.1::gentoo
+>=x11-libs/libX11-1.7.2 abi_x86_32
+# required by media-libs/libglvnd-1.3.3::gentoo[X]
+# required by media-libs/mesa-21.1.3::gentoo
+# required by media-libs/libepoxy-1.5.8::gentoo[egl]
+# required by x11-libs/gtk+-3.24.29::gentoo
+# required by x11-themes/adwaita-icon-theme-40.1.1::gentoo
+>=x11-libs/libXext-1.3.4 abi_x86_32
+# required by x11-libs/libX11-1.7.2::gentoo
+# required by x11-libs/libXfixes-6.0.0::gentoo
+# required by media-libs/mesa-21.1.3::gentoo[X]
+# required by media-libs/libepoxy-1.5.8::gentoo[egl]
+# required by x11-libs/gtk+-3.24.29::gentoo
+# required by x11-themes/adwaita-icon-theme-40.1.1::gentoo
+>=x11-libs/libxcb-1.14 abi_x86_32
+# required by x11-libs/libxcb-1.14::gentoo
+# required by media-sound/pulseaudio-13.0-r1::gentoo[X]
+# required by media-video/ffmpeg-4.4::gentoo[pulseaudio]
+# required by media-plugins/alsa-plugins-1.2.2::gentoo[ffmpeg]
+>=x11-libs/libXau-1.0.9-r1 abi_x86_32
+# required by x11-libs/libxcb-1.14::gentoo
+# required by media-sound/pulseaudio-13.0-r1::gentoo[X]
+# required by media-video/ffmpeg-4.4::gentoo[pulseaudio]
+# required by media-plugins/alsa-plugins-1.2.2::gentoo[ffmpeg]
+>=x11-libs/libXdmcp-1.1.3 abi_x86_32
+# required by x11-libs/libxcb-1.14::gentoo
+# required by media-sound/pulseaudio-13.0-r1::gentoo[X]
+# required by media-video/ffmpeg-4.4::gentoo[pulseaudio]
+# required by media-plugins/alsa-plugins-1.2.2::gentoo[ffmpeg]
+>=x11-base/xcb-proto-1.14.1 abi_x86_32
+# required by dev-python/pyzmq-20.0.0::gentoo[-test]
+# required by dev-python/jupyter_client-6.1.12::gentoo
+# required by dev-python/ipykernel-5.5.4-r1::gentoo
+# required by dev-python/ipyparallel-6.3.0-r1::gentoo[-test]
+# required by dev-python/ipython-7.25.0::gentoo[smp]
+# required by dev-python/ipython (argument)
+>=net-libs/zeromq-4.3.4-r1 drafts
+# required by net-print/cups-filters-1.28.9::gentoo[postscript]
+# required by net-print/cups-2.3.3_p2-r1::gentoo
+# required by net-im/discord-bin-0.0.15::gentoo
+# required by net-im/discord-bin (argument)
+>=app-text/ghostscript-gpl-9.54.0 cups
+# required by x11-misc/xdg-utils-1.1.3_p20200220-r5::gentoo
+# required by net-print/cups-2.3.3_p2-r1::gentoo[X]
+# required by app-text/ghostscript-gpl-9.54.0::gentoo[cups]
+# required by net-print/cups-filters-1.28.9::gentoo[postscript]
+>=app-text/xmlto-0.0.28-r6 text
+# required by gnome-base/gnome-keyring-40.0::gentoo
+# required by app-crypt/libsecret-0.20.4::gentoo
+# required by app-editors/vscode-1.57.1::gentoo
+# required by app-editors/vscode (argument)
+>=app-crypt/gcr-3.40.0 gtk
+# required by sys-power/suspend-1.0_p20200924::gentoo[crypt]
+# required by sys-power/suspend (argument)
+>=dev-libs/libgcrypt-1.9.3 static-libs
+# required by sys-power/suspend-1.0_p20200924::gentoo[crypt]
+# required by sys-power/suspend (argument)
+>=dev-libs/libgpg-error-1.42 static-libs
+# required by sys-power/suspend-1.0_p20200924::gentoo[lzo]
+# required by sys-power/suspend (argument)
+>=dev-libs/lzo-2.10 static-libs
+# Layman
+app-portage/layman sync-plugin-portage git
+sys-kernel/linux-firmware savedconfig

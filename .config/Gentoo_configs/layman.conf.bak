@@ -1,0 +1,16 @@
+[thegreatmcpain]
+priority = 50
+location = /var/lib/layman/thegreatmcpain
+layman-type = git
+sync-type = laymansync
+sync-uri = https://gitlab.com/TheGreatMcPain/thegreatmcpain-overlay.git
+auto-sync = Yes
+
+[bobwya]
+priority = 50
+location = /var/lib/layman/bobwya
+layman-type = git
+sync-type = laymansync
+sync-uri = https://github.com/bobwya/miscellaneous_ebuilds.git
+auto-sync = Yes
+
