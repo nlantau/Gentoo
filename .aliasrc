@@ -24,7 +24,6 @@ alias sd="cd $XDG_CONFIG_HOME/scripts"
 alias cc="cd $XDG_CONFIG_HOME"
 alias da="cd $DROPBOXDIR"
 alias sa="cd $SCHOOLDIR"
-alias down="cd ~/Hämtningar"
 
 # Bluetooth
 alias b="bluetoothctl"

@@ -169,7 +169,7 @@ static Key keys[] = {
         { MODALT|ShiftMask,             XK_d,      spawn,          {.v = enabledualmonitors } },         
         { MODALT|ShiftMask,             XK_t,      spawn,          {.v = enabletriplemonitors } },         
         { MODALT|ShiftMask,             XK_p,      spawn,          {.v = flame } },         
-        //{ MODALT,                       XK_l,      spawn,          {.v = brlowcmd } },
+        { MODALT,                       XK_l,      spawn,          {.v = brlowcmd } },
         //{ MODALT|ShiftMask,             XK_j,      spawn,          {.v = intellij } },
         //{ MODALT|ShiftMask,             XK_m,      spawn,          {.v = spotify } },
 
