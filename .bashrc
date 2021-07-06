@@ -22,8 +22,10 @@ shopt -s autocd
 export EDITOR='vim'
 export VISUAL='vim'
 HISTSIZE= HISTFILESIZE= # Infinite history.
-export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
+#export PS1='\[\e[0m\]\$ \[\e[0;1;38;5;160m\]\u \[\e[0;38;5;31m\]\w \[\e[0;38;5;160m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\[\e[0;92m\]> \[\e[0m\]'
+export PS1='\[\e[0m\]\$\[\e[0;92m\]_ \[\e[0;38;5;31m\]\W\[\e[0;38;5;160m\] $(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\[\e[0;92m\]> \[\e[0m\]'
+#"\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 pathappend() {
   for ARG in "$@"
   do
