@@ -1,0 +1,54 @@
+#!/bin/sh
+# nlantau, 2021-05-13
+# updated, 2021-07-06
+
+
+while getopts "hcdi" o; do case "${o}" in
+  h) printf "\n > To turn bluetooth on and connect to Bose SIII, set -c flag"
+     printf "\n > To disconnect and power off bluetooth, set -d flag"
+     printf "\n > To grab bluetooth info, set -i flag\n\n\n" && exit 0 ;;
+  c) connect=on ;;
+  d) disconnect=on ;;
+  i) stat=on ;;
+  *) printf "\n > Invalid option. See \"-h\" for help\n\n" && exit 1 ;;
+esac done
+
+[[ -z $connect && -z $disconnect && -z $stat ]] && { printf "\n > Invalid option. See \"-h\" for help\n\n" && exit 1 ; }
+
+
+rc_serv=$(rc-service bluetooth status | grep -o started)
+
+# Start rc-service bluetooth if stopped
+{ [[ $? -eq 0 ]] && BMAC=$(bluetoothctl devices | awk '/Bose/ {print $2}') ; }
+{ [[ $? -eq 1 ]] && sudo rc-service bluetooth start \
+  && BMAC=$(bluetoothctl devices | awk '/Bose/ {print $2}') \
+  && rc-service bluetooth status ; }
+
+
+function blue() {
+  [[ $1 == "off" ]] && sudo rc-service bluetooth stop && exit 0
+
+  echo "> in blue()"
+  sleep 1
+  { bluetoothctl power $1 ; } && printf "\n > Power $1\n" ;
+  echo "> under power"
+
+  # If turning on, connect to Bose SIII as well
+  printf "\n > Connecting...\n"
+  echo $BMAC
+  { [[ $1 == "on" ]] && bluetoothctl connect $BMAC  ; }
+}
+
+function status_() {
+  bluetoothctl info $BMAC
+  sudo rc-service bluetooth stop
+  exit 1 
+}
+
+
+
+# Status, if $stat
+{ [[ -z $stat ]] || status_ ; } 
+
+# Turn on or off bluetooth
+{ [[ -z $disconnect ]] && blue on ; } || { [[ -z $connect ]] && blue off ; }
