@@ -2,6 +2,8 @@
 # nlantau, 2021-05-13
 # updated, 2021-07-06
 
+# Updated version: Gentoo adjusted (using OpenRC). 
+# Starts and stops the rc-service for bluetooth.
 
 while getopts "hcdi" o; do case "${o}" in
   h) printf "\n > To turn bluetooth on and connect to Bose SIII, set -c flag"
@@ -13,9 +15,10 @@ while getopts "hcdi" o; do case "${o}" in
   *) printf "\n > Invalid option. See \"-h\" for help\n\n" && exit 1 ;;
 esac done
 
+# Demand flag usage
 [[ -z $connect && -z $disconnect && -z $stat ]] && { printf "\n > Invalid option. See \"-h\" for help\n\n" && exit 1 ; }
 
-
+# Check if rc-service is started
 rc_serv=$(rc-service bluetooth status | grep -o started)
 
 # Start rc-service bluetooth if stopped
@@ -28,13 +31,10 @@ rc_serv=$(rc-service bluetooth status | grep -o started)
 function blue() {
   [[ $1 == "off" ]] && sudo rc-service bluetooth stop && exit 0
 
-  echo "> in blue()"
   sleep 1
   { bluetoothctl power $1 ; } && printf "\n > Power $1\n" ;
-  echo "> under power"
 
   # If turning on, connect to Bose SIII as well
-  printf "\n > Connecting...\n"
   echo $BMAC
   { [[ $1 == "on" ]] && bluetoothctl connect $BMAC  ; }
 }
@@ -44,8 +44,6 @@ function status_() {
   sudo rc-service bluetooth stop
   exit 1 
 }
-
-
 
 # Status, if $stat
 { [[ -z $stat ]] || status_ ; } 
