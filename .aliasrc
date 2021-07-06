@@ -15,8 +15,11 @@ alias ve="$EDITOR $HOME/.bashenv"
 alias ali="$EDITOR $HOME/.aliasrc"
 alias vix="$EDITOR $HOME/.xinitrc"
 
-# wm
+# dwm
 alias vc="$EDITOR $XDG_CONFIG_HOME/dwm/config.def.h"
+
+# tmux
+alias t="tmux source-file ~/.tmux.conf"
 
 # cd alias
 alias cg="cd $GITHUBDIR"
