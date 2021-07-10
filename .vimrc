@@ -113,7 +113,7 @@ vnoremap <S-k> 10k<CR>
 
 " ----- Editor Config -------------------------------------------------
 set encoding=UTF-8
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Vim fuzzy
 set path+=**

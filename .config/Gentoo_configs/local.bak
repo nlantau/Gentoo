@@ -80,6 +80,8 @@
 # Layman
 app-portage/layman sync-plugin-portage git
 sys-kernel/linux-firmware savedconfig
+# Vim
+app-editors/vim vim-with-x
 # required by x11-libs/pango-1.48.7::gentoo
 # required by app-editors/vscode-1.57.1::gentoo
 # required by @selected
@@ -118,3 +120,6 @@ sys-kernel/linux-firmware savedconfig
 # required by www-client/qutebrowser-2.3.0::gentoo
 # required by www-client/qutebrowser (argument)
 >=dev-qt/qtmultimedia-5.15.2 widgets
+# required by app-text/xournal-0.4.8.2016::gentoo
+# required by app-text/xournal (argument)
+>=app-text/poppler-21.07.0 cairo

@@ -18,4 +18,4 @@ notify-send "Gentoo config files backup completed" \
 
 sudo chown -R $USER:$USER ${BDIR} || notify-send "Error changing owner to Gentoo config files"
 
-
+date '+%X-%x' >> backup_g.log

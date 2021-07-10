@@ -21,7 +21,7 @@ USE="X elogind xinerama udev dbus git crypt alc \
      -dvd -dvdr -dv -coreaudio -scanner -a52 \
      -systemd -aqua -css -cups"
 
-MAKEOPTS="-j10"
+MAKEOPTS="-j12"
 #EMERGE_DEFAULT_OPTS="--jobs 4 --load-average 2.7"
 
 VIDEO_CARDS="intel i965 iris nvidia"
