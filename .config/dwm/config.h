@@ -108,8 +108,8 @@ static const char *voldowncmd[] = { "/usr/bin/pactl","set-sink-volume","0","-5%"
 static const char *miccmd[] = { "/usr/bin/pactl","set-source-mute","@DEFAULT_SOURCE@","toggle", NULL };
 
 /* Backlight */
-static const char *brupcmd[] = { "sudo", "xbacklight", "-inc", "10", NULL };
-static const char *brdowncmd[] = { "sudo", "xbacklight", "-dec", "10", NULL };
+static const char *brupcmd[] = { "sudo", "xbacklight", "-inc", "5", NULL };
+static const char *brdowncmd[] = { "sudo", "xbacklight", "-dec", "5", NULL };
 static const char *brlowcmd[] = { "sudo", "xbacklight", "-set", "1", NULL };
 
 /* Power */
