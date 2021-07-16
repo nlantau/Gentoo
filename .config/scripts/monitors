@@ -9,7 +9,7 @@ M3="DP3"
 function setting_laptop {
   xrandr --output \
     $M1 --mode 1920x1080 --output \
-    $M3 --off --output $M1 --off >/dev/null 2>&1
+    $M3 --off --output $M2 --off >/dev/null 2>&1
     [[ $? -eq 0 ]] || notify-send "Laptop error"
 
 }

@@ -2,6 +2,7 @@
 # nlantau, 2021-05-03
 
 # Possibly not the correct temp source
-CPU_TEMP=$(sensors | awk '/^Package id 0:/ {print $4}')
+#CPU_TEMP=$(sensors | awk '/^Package id 0:/ {print $4}')
+CPU_TEMP=$(sensors | awk '/^CPU:/ {print $2}')
 
 echo $CPU_TEMP
