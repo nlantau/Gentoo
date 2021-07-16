@@ -1,30 +1,34 @@
 #!/bin/sh
 # nlantau, 2021-04-24
 
+M1="eDP1"
+M2="DP1"
+M3="DP3"
+
 
 function setting_laptop {
   xrandr --output \
-    eDP-1 --mode 1920x1080 --output \
-    DP-3 --off --output DP-1 --off >/dev/null 2>&1
+    $M1 --mode 1920x1080 --output \
+    $M3 --off --output $M1 --off >/dev/null 2>&1
     [[ $? -eq 0 ]] || notify-send "Laptop error"
 
 }
 
 function setting_dual { 
   xrandr --output \
-    eDP-1 --off --output \
-    DP-3 --mode 1920x1080 --output \
-    DP-1 --mode 1920x1080 --right-of DP-3 >/dev/null 2>&1
+    $M1 --off --output \
+    $M3 --mode 1920x1080 --output \
+    $M2 --mode 1920x1080 --right-of $M3 >/dev/null 2>&1
     [[ $? -eq 0 ]] || notify-send "Not Connected"
 }
 
 function setting_triple {  
   # Modified to be used during labs in school
   xrandr --output \
-    eDP-1 --mode 1920x1080 --output \
-    DP-3 --mode 1920x1080 --right-of \
-    eDP-1 --output \
-    DP-1 --mode 1920x1080 --right-of DP-3 >/dev/null 2>&1
+    $M1 --mode 1920x1080 --output \
+    $M3 --mode 1920x1080 --right-of \
+    $M1 --output \
+    $M2 --mode 1920x1080 --right-of $M3 >/dev/null 2>&1
     [[ $? -eq 0 ]] || notify-send "Not Connected"
 }
 
