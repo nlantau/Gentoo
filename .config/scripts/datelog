@@ -19,6 +19,7 @@ if [[ -n $1 ]]; then
 fi
 
 if ! [[ -f $full_path ]];then
+  notify-send -t 0 "Du var vid datorn $minutes minuter igår"
   notify-send "Du var vid datorn $minutes minuter igår"
   touch $full_path
 fi

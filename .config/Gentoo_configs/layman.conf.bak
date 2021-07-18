@@ -14,3 +14,11 @@ sync-type = laymansync
 sync-uri = https://github.com/bobwya/miscellaneous_ebuilds.git
 auto-sync = Yes
 
+[bombo82]
+priority = 50
+location = /var/lib/layman/bombo82
+layman-type = git
+sync-type = laymansync
+sync-uri = https://github.com/bombo82/bombo82-overlay.git
+auto-sync = Yes
+
