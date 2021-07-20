@@ -1,21 +1,22 @@
 #!/bin/sh
 # nlantau, 2021-07-04
+# updated, 2021-07-20
 
 PDIR="/etc/portage"
-BDIR="${XDG_CONFIG_HOME}/Gentoo_configs"
+BDIR="/home/nlantau/.config/Gentoo_configs"
 
 PUSE="${PDIR}/package.use/local"
 LF_CONF="${PDIR}/savedconfig/sys-kernel/linux-firmware"
 MAKE_CONF="${PDIR}/make.conf"
 LAYMAN_CONF="${PDIR}/repos.conf/layman.conf"
 
-{ sudo cp ${PUSE} ${BDIR}/local.bak && \
-sudo cp ${LF_CONF} ${BDIR}/linux-firmware.bak && \
-sudo cp ${MAKE_CONF} ${BDIR}/make.conf.bak && \
-sudo cp ${LAYMAN_CONF} ${BDIR}/layman.conf.bak && \
+{ cp ${PUSE} ${BDIR}/local.bak && \
+cp ${LF_CONF} ${BDIR}/linux-firmware.bak && \
+cp ${MAKE_CONF} ${BDIR}/make.conf.bak && \
+cp ${LAYMAN_CONF} ${BDIR}/layman.conf.bak && \
 notify-send "Gentoo config files backup completed" \
 ; } || notify-send "Error copying Gentoo config files"
 
-sudo chown -R $USER:$USER ${BDIR} || notify-send "Error changing owner to Gentoo config files"
+chown -R nlantau:nlantau ${BDIR} || notify-send "Error changing owner to Gentoo config files"
 
-date '+%X-%x' >> backup_g.log
+date '+%X-%x' >> /home/nlantau/.config/scripts/backup_gentoo_conf.log

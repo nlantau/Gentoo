@@ -1,4 +1,4 @@
 #!/bin/sh
 # nlantau, 2021-07-01
 
-{ sudo s2ram && slock ; } || echo "Error" >> susp_lock.log
+{ sudo s2ram && slock ; } || echo "Error suspening $(date '+%X_%x')" >> /home/nlantau/.config/scripts/susp_lock.log
