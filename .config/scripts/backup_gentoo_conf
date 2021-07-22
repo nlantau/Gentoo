@@ -7,6 +7,7 @@ BDIR="/home/nlantau/.config/Gentoo_configs"
 
 KERNEL="/usr/src/linux/.config"
 README="/root/kernel_dev/README.md"
+WORLD="/var/lib/portage/world"
 
 PUSE="${PDIR}/package.use/local"
 LF_CONF="${PDIR}/savedconfig/sys-kernel/linux-firmware"
@@ -19,6 +20,7 @@ cp ${MAKE_CONF} ${BDIR}/make.conf.bak && \
 cp ${LAYMAN_CONF} ${BDIR}/layman.conf.bak && \
 cp ${KERNEL} ${BDIR}/`uname -r`.config && \
 cp ${README} ${BDIR}/README.md && \
+cp ${WORLD} ${BDIR}/world.bak && \
 notify-send "Gentoo config files backup completed" \
 ; } || notify-send "Error copying Gentoo config files"
 
