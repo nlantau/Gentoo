@@ -12,6 +12,8 @@ GRUB_DEFAULT="1>2" # Used when 2nd entry in /boot/grub/grub.cfg is what we want 
 ```
 
 ## Useful utilities
-* lsmod                     # Show loaded modules
-* lspci -k                  # Show loaded drivers
-* dmesg | grep -i firmware  # Show loaded firmware
+```sh
+lsmod                     # Show loaded modules
+lspci -k                  # Show loaded drivers
+dmesg | grep -i firmware  # Show loaded firmware
+```
