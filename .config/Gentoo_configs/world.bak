@@ -62,7 +62,6 @@ sys-process/cronie
 sys-process/htop
 sys-process/lsof
 www-client/firefox
-www-client/qutebrowser
 x11-apps/mesa-progs
 x11-apps/setxkbmap
 x11-apps/xinput

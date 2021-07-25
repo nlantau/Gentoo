@@ -1,4 +1,5 @@
 # Remove files that shall not be installed from this list.
 i915/kbl_dmc_ver1_04.bin
+intel/ibt-19-0-4.ddc
 intel/ibt-19-0-4.sfi
 iwlwifi-QuZ-a0-hr-b0-63.ucode
