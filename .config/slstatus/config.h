@@ -72,6 +72,7 @@ static const struct arg args[] = {
         { run_command,      "BL: %s%% | ",             "xbacklight -get" },
         { run_command,      "VP: %s%% | ",             "$HOME/.config/scripts/audio" },
         { wifi_essid,       " %s | ",                "wlp0s20f3"},
+        { ipv4,             " %s | ",                "enp0s20f0u1"},
 	{ datetime,         "%s",                      "%F %T" },
         
 };
