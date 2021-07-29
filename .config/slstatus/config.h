@@ -65,12 +65,12 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-        { run_command,      "TP: %s | ",              "$HOME/.config/scripts/cputemp" },
+        { run_command,      " %s | ",              "$HOME/.config/scripts/cputemp" },
         { cpu_perc,         "CPU: %s%% | ",               NULL  },
-        { ram_used,         "RP: %s | ",                 NULL  },
-        { battery_perc,     "BP: %s%% | ",               "BAT0" },
-        { run_command,      "BL: %s%% | ",             "xbacklight -get" },
+        { ram_used,         "R: %s | ",                 NULL  },
+        { battery_perc,     "BAP: %s%% | ",               "BAT0" },
         { run_command,      "VP: %s%% | ",             "$HOME/.config/scripts/audio" },
+        { run_command,      "BLP: %s%% | ",             "xbacklight -get" },
         { wifi_essid,       " %s | ",                "wlp0s20f3"},
         { ipv4,             " %s | ",                "enp0s20f0u1"},
 	{ datetime,         "%s",                      "%F %T" },
