@@ -72,5 +72,6 @@ x11-base/xorg-server
 x11-drivers/xf86-video-intel
 x11-misc/dmenu
 x11-misc/dunst
+x11-misc/unclutter
 x11-misc/xclip
 x11-terms/alacritty
