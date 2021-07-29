@@ -17,7 +17,8 @@ bashenv="/home/nlantau/.bashenv"
 [[ -f $bashenv ]] && source $bashenv
 [[ -f $aliasrc ]] && source $aliasrc
 
-stty -ixon 
+
+umask 022 # fp 644, dp 755
 shopt -s autocd
 
 pathappend() {
