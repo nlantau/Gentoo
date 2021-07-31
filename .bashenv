@@ -35,3 +35,6 @@ HISTSIZE= HISTFILESIZE= # Infinite history.
 
 # PS1
 export PS1='\[\e[0m\]\$\[\e[0;92m\]_ \[\e[0;38;5;31m\]\W\[\e[0;38;5;160m\] $(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\[\e[0;92m\]> \[\e[0m\]'
+
+# LFS
+export LFS=/mnt/lfs
