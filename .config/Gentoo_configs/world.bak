@@ -39,6 +39,7 @@ media-sound/alsa-utils
 media-sound/pavucontrol
 media-sound/pulseaudio
 media-sound/spotify
+net-analyzer/nmap
 net-im/discord-bin
 net-misc/dhcpcd
 net-misc/dropbox
