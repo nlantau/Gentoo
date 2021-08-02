@@ -76,10 +76,11 @@ augroup END
 augroup myC
   au!
   au BufRead,BufNewFile *.c setfiletype c
-  au FileType c setlocal expandtab
-  au FileType c setlocal tabstop=8
   au FileType c setlocal shiftwidth=2
-  au FileType c setlocal softtabstop=2
+  au FileType c setlocal tabstop=2
+  au FileType c setlocal noexpandtab
+  au FileType c setlocal listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+  au FileType c setlocal list
 augroup END
 
 " ----- au python -----------------------------------------------------------
@@ -134,14 +135,7 @@ set showmatch
 set autoindent
 set cursorline
 set showbreak=↪
-"set wrapmargin=8
 set relativenumber
-
-" Tab control
-set tabstop=8
-set softtabstop=4
-set shiftwidth=4
-set expandtab
 
 set shiftround
 set ruler
