@@ -3,17 +3,9 @@
 
 # Reason: NetworkManager sometimes goes inactive
 
-stat=$(sudo rc-service NetworkManager status | grep -o started)
+service="rc-service NetworkManager"
 
-if [[ $? -eq 0 ]]; then
-  sudo rc-service NetworkManager stop
-  sleep 0.5
-  sudo rc-service NetworkManager start
-  notify-send "Restarted rc-service NetworkManager"
-  exit 0
-elif [[ $? -eq 1 ]]; then
-  sudo rc-service NetworkManager start
-  notify-send "Started rc-service NetworkManager"
-  exit 0
-fi
-
+sudo $service stop #rc-service NetworkManager stop
+sleep 0.5
+sudo $service start #rc-service NetworkManager start
+notify-send "Restarted rc-service NetworkManager"

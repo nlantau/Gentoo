@@ -11,4 +11,4 @@ unclutter -idle 3 &
 
 exec /home/nlantau/.config/slstatus/slstatus &
 
-exec dwm
+exec dbus-launch --exit-with-session dwm
