@@ -2,6 +2,8 @@
 # nlantau, 2021-07-04
 # updated, 2021-07-23
 
+CHLFS="/root/mount_lfs_chroot"
+
 PDIR="/etc/portage"
 BDIR="/home/nlantau/.config/Gentoo_configs"
 
@@ -21,6 +23,7 @@ cp ${LAYMAN_CONF} ${BDIR}/layman.conf.bak && \
 cp ${KERNEL} ${BDIR}/`uname -r`.config && \
 cp ${README} ${BDIR}/README.md && \
 cp ${WORLD} ${BDIR}/world.bak && \
+cp ${CHLFS} ${BDIR}/mnt_lfs && \
 notify-send "Gentoo config files backup completed" \
 ; } || notify-send "Error copying Gentoo config files"
 

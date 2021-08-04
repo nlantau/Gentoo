@@ -1,0 +1,58 @@
+#!/bin/sh
+# nlantau, 2021-08-04
+
+######################################################
+#
+#   This scripts simplifies the process of mounting
+#   necessary virtual fs and virtual kernel fs needed
+#   for entering chroot on LFS.
+# 
+#   Needs to be ran as root
+#
+######################################################
+
+
+# Check if root
+[[ `id -u` -eq 0 ]] || { echo "Need to be ran as root" && exit 1 ; }
+
+function exit_ () {
+  umount $LFS/dev{/pts,}
+  umount $LFS/{sys,proc,run}
+  umount $LFS
+  lsblk -f
+  exit 0
+}
+
+# Exiting chroot
+[[ $1 = "exit" ]] && exit_
+
+echo "This should NOT be shown when \"exit\" is used as param 1"
+
+# Make sure $LFS is /mnt/lfs
+{ [[ $LFS = /mnt/lfs ]] && echo "LFS variable: $LFS" ; } || { echo "LFS variable not set" &&  exit 1 ; }
+
+# Make sure LFS partition is mounted to $LFS
+{ [[ `lsblk -f | awk '/nvme0n1p4/ {print $7}'` = $LFS ]] && echo "LFS partition mounted" ; } \
+  || { mount /dev/nvme0n1p4 $LFS && echo "Mounting $LFS" && lsblk -f ; } 
+
+
+
+# Mount and populate /dev
+mount -v --bind /dev $LFS/dev
+
+# Mount virtual kernel file systems
+mount -v --bind /dev/pts $LFS/dev/pts
+mount -vt proc proc $LFS/proc
+mount -vt sysfs sysfs $LFS/sys
+mount -vt tmpfs tmpfs $LFS/run
+
+# Enter Chroot
+chroot "$LFS" /usr/bin/env -i \
+  HOME=/root \
+  TERM="$TERM" \
+  PS1=export PS1="(LFS Chroot) \[$(tput bold)\]\[\033[38;5;1m\]\u\[$(tput sgr0)\]:\w\[$(tput sgr0)\] > " \
+  PATH=/bin:/usr/bin:/sbin:/usr/sbin \
+  /bin/bash --login +h
+
+
+
