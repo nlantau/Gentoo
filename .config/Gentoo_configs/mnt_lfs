@@ -50,7 +50,7 @@ mount -vt tmpfs tmpfs $LFS/run
 chroot "$LFS" /usr/bin/env -i \
   HOME=/root \
   TERM="$TERM" \
-  PS1=export PS1="(LFS Chroot) \[$(tput bold)\]\[\033[38;5;1m\]\u\[$(tput sgr0)\]:\w\[$(tput sgr0)\] > " \
+  PS1='(LFS Chroot) \[$(tput bold)\]\[\033[38;5;1m\]\u\[$(tput sgr0)\]:\w\[$(tput sgr0)\] > ' \
   PATH=/bin:/usr/bin:/sbin:/usr/sbin \
   /bin/bash --login +h
 
