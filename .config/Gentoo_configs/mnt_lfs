@@ -16,15 +16,44 @@
 [[ `id -u` -eq 0 ]] || { echo "Need to be ran as root" && exit 1 ; }
 
 function exit_ () {
+  umount $LFS/dev/shm
   umount $LFS/dev{/pts,}
   umount $LFS/{sys,proc,run}
   umount $LFS
   lsblk -f
-  exit 0
+}
+
+function enter_() {
+  # Enter Chroot
+  chroot "$LFS" /usr/bin/env -i \
+    HOME=/root \
+    TERM="$TERM" \
+    PS1='(LFS Chroot) \[$(tput bold)\]\[\033[38;5;1m\]\u\[$(tput sgr0)\]:\w\[$(tput sgr0)\] > ' \
+    PATH=/bin:/usr/bin:/sbin:/usr/sbin \
+    /bin/bash --login +h
+}
+
+function mount_() {
+  # Mount and populate /dev
+  mount -v --bind /dev $LFS/dev
+
+  # Mount virtual kernel file systems
+  mount -v --bind /dev/pts $LFS/dev/pts
+  mount -vt proc proc $LFS/proc
+  mount -vt sysfs sysfs $LFS/sys
+  mount -vt tmpfs tmpfs $LFS/run
+
+  if [ -h $LFS/dev/shm ]; then
+    mkdir -pv $LFS/$(readlink $LFS/dev/shm)
+  fi
 }
 
 # Exiting chroot
-[[ $1 = "exit" ]] && exit_
+{ [[ $1 = "exit" ]] && exit_ ; } && { exit 0 ; }
+
+# Chroot a second tty
+{ [[ $1 = "2" ]] && enter_ ; } && { exit 0 ; }
+
 
 echo "This should NOT be shown when \"exit\" is used as param 1"
 
@@ -35,24 +64,10 @@ echo "This should NOT be shown when \"exit\" is used as param 1"
 { [[ `lsblk -f | awk '/nvme0n1p4/ {print $7}'` = $LFS ]] && echo "LFS partition mounted" ; } \
   || { mount /dev/nvme0n1p4 $LFS && echo "Mounting $LFS" && lsblk -f ; } 
 
+# Mount file systems
+mount_
 
-
-# Mount and populate /dev
-mount -v --bind /dev $LFS/dev
-
-# Mount virtual kernel file systems
-mount -v --bind /dev/pts $LFS/dev/pts
-mount -vt proc proc $LFS/proc
-mount -vt sysfs sysfs $LFS/sys
-mount -vt tmpfs tmpfs $LFS/run
-
-# Enter Chroot
-chroot "$LFS" /usr/bin/env -i \
-  HOME=/root \
-  TERM="$TERM" \
-  PS1='(LFS Chroot) \[$(tput bold)\]\[\033[38;5;1m\]\u\[$(tput sgr0)\]:\w\[$(tput sgr0)\] > ' \
-  PATH=/bin:/usr/bin:/sbin:/usr/sbin \
-  /bin/bash --login +h
-
+# If first chroot, enter now
+enter_
 
 
