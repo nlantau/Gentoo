@@ -90,6 +90,8 @@ augroup myPython
   au FileType python setlocal tabstop=8
   au FileType python setlocal shiftwidth=4
   au FileType python setlocal softtabstop=4
+  au FileType python setlocal listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+  au FileType python setlocal list
 augroup END
 
 " ----- .vimrc --------------------------------------------------------------
@@ -105,6 +107,9 @@ nnoremap <Leader><Leader> :w<CR>
 
 " ----- Save And Compile pdf  -----------------------------------------
 nnoremap <C-r>l :w<CR>:!pdflatex %<Enter><CR>
+
+" ----- xor list ------------------------------------------------------
+nnoremap <C-r>c :set list!<CR>
 
 " ----- Navigation ----------------------------------------------------
 nnoremap <S-j> 10j<CR>
