@@ -17,9 +17,10 @@ bashenv="/home/nlantau/.bashenv"
 [[ -f $bashenv ]] && source $bashenv
 [[ -f $aliasrc ]] && source $aliasrc
 
-
 umask 022 # fp 644, dp 755
 shopt -s autocd
+
+set -o vi
 
 pathappend() {
   for ARG in "$@"

@@ -80,7 +80,7 @@ augroup myC
   au FileType c setlocal tabstop=2
   au FileType c setlocal noexpandtab " using TAB, not converting to spaces
   au FileType c setlocal listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-  au FileType c setlocal list
+  "au FileType c setlocal list
 augroup END
 
 " ----- au python -----------------------------------------------------------
@@ -91,7 +91,7 @@ augroup myPython
   au FileType python setlocal shiftwidth=4
   au FileType python setlocal softtabstop=4
   au FileType python setlocal listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-  au FileType python setlocal list
+  "au FileType python setlocal list
 augroup END
 
 " ----- .vimrc --------------------------------------------------------------
