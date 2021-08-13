@@ -20,7 +20,7 @@ bashenv="/home/nlantau/.bashenv"
 umask 022 # fp 644, dp 755
 shopt -s autocd
 
-set -o vi
+#set -o vi
 
 pathappend() {
   for ARG in "$@"
