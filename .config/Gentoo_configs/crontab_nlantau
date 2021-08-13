@@ -5,7 +5,8 @@
 * * * * * export DISPLAY=:0.0 && export XAUTHORITY=/home/nlantau/.Xauthority && /home/nlantau/.config/scripts/datelog
 
 # Nightly wallpaper
-1 20 * * * export DISPLAY=:0.0 && export XAUTHORITY=/home/nlantau/.Xauthority && feh --bg-scale /home/nlantau/Bilder/bg/g1.png
+1 20-23 * * * export DISPLAY=:0.0 && export XAUTHORITY=/home/nlantau/.Xauthority && feh --bg-scale /home/nlantau/Bilder/bg/g1.png
+1 00-07 * * * export DISPLAY=:0.0 && export XAUTHORITY=/home/nlantau/.Xauthority && feh --bg-scale /home/nlantau/Bilder/bg/g1.png
 
 # Daily wallpaper
 1 08-19 * * * export DISPLAY=:0.0 && export XAUTHORITY=/home/nlantau/.Xauthority && feh --bg-scale /home/nlantau/Bilder/bg/g2.jpg
