@@ -91,7 +91,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 
 /* Applications */
-static const char *intellij[]  = { "/home/nlantau/IntelliJ/idea-IU-211.6693.111/bin/idea.sh", NULL };
+static const char *intellij[]  = { "idea-ultimate", NULL };
 static const char *flame[]  = { "flameshot","gui", NULL };
 static const char *spotify[] = {"spotifyterm", NULL};
 
@@ -170,7 +170,7 @@ static Key keys[] = {
         { MODALT|ShiftMask,             XK_t,      spawn,          {.v = enabletriplemonitors } },         
         { MODALT|ShiftMask,             XK_p,      spawn,          {.v = flame } },         
         { MODALT,                       XK_l,      spawn,          {.v = brlowcmd } },
-        //{ MODALT|ShiftMask,             XK_j,      spawn,          {.v = intellij } },
+        { MODALT|ShiftMask,             XK_j,      spawn,          {.v = intellij } },
         //{ MODALT|ShiftMask,             XK_m,      spawn,          {.v = spotify } },
 
         /* XF86                                                             */
