@@ -3,9 +3,9 @@
 
 # Reason: NetworkManager sometimes goes inactive
 
-service="rc-service NetworkManager"
+service="rc-service wpa_supplicant"
 
 sudo $service stop #rc-service NetworkManager stop
 sleep 0.5
 sudo $service start #rc-service NetworkManager start
-notify-send "Restarted rc-service NetworkManager"
+notify-send "Restarted rc-service wpa_supplicant"

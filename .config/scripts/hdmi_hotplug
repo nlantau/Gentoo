@@ -1,0 +1,34 @@
+#!/bin/sh
+# nlantau, 2021-08-15
+
+################################################
+#
+# Purpose: when udev registers change on HDMI,
+#          switch to using laptop monitor only
+#
+# udev rule:
+# KERNEL=="card0", ACTION=="change", SUBSYSTEM=="drm", \
+# ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/nlantau/.Xauthority", \
+# RUN+="/home/nlantau/.config/scripts/hdmi_hotplug"
+#
+################################################
+
+export DISPLAY=:0.0
+export XAUTHORITY=/home/nlantau/.Xauthority
+
+LAP_MON_STATUS=$(cat /sys/class/drm/card0-eDP-1/status)
+L_MON_STATUS=$(cat /sys/class/drm/card0-DP-1/status)
+R_MON_STATUS=$(cat /sys/class/drm/card0-DP-3/status)
+
+{ [[ $L_MON_STATUS != "connected" ]] && [[ $R_MON_STATUS != "connected" ]] \
+  && /home/nlantau/.config/scripts/monitors laptop \
+  && echo `date +%x-%X` >> /home/nlantau/.config/scripts/hdmi_udev.log ; }
+
+
+function debug_() {
+  for i in "$@"; do
+    echo $i 
+  done
+}
+
+#debug_ $LAP_MON_STATUS $L_MON_STATUS $R_MON_STATUS

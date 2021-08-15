@@ -71,8 +71,8 @@ static const struct arg args[] = {
         { battery_perc,     "BAP: %s%% | ",               "BAT0" },
         { run_command,      "VP: %s%% | ",             "$HOME/.config/scripts/audio" },
         { run_command,      "BLP: %s%% | ",             "xbacklight -get" },
-        { wifi_essid,       " %s | ",                "wlp0s20f3"},
-        { ipv4,             " %s | ",                "enp0s20f0u1"},
+        { wifi_essid,       " %s | ",                "wlan0"},
+        { ipv4,             " %s | ",                "usb0"},
 	{ datetime,         "%s",                      "%F %T" },
         
 };

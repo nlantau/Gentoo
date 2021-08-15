@@ -76,8 +76,8 @@ augroup END
 augroup myC
   au!
   au BufRead,BufNewFile *.c setfiletype c
-  au FileType c setlocal shiftwidth=2
-  au FileType c setlocal tabstop=2
+  au FileType c setlocal shiftwidth=8
+  au FileType c setlocal tabstop=8
   au FileType c setlocal noexpandtab " using TAB, not converting to spaces
   au FileType c setlocal listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
   "au FileType c setlocal list
