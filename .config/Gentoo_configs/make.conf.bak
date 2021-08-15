@@ -1,7 +1,5 @@
 # nlantau, 2021-06-27
-# updated, 2021-07-03
-
-# Please consult /usr/share/portage/config/make.conf.example
+# updated, 2021-08-15
 
 COMMON_FLAGS="-march=skylake -O2 -pipe"
 
@@ -9,11 +7,14 @@ CFLAGS="${COMMON_FLAGS}"
 CXXFLAGS="${COMMON_FLAGS}"
 FCFLAGS="${COMMON_FLAGS}"
 FFLAGS="${COMMON_FLAGS}"
+RUSTFLAGS="-C target-cpu=skylake"
+CARGO_TARGET_x86_64_UNKNOWN_LINUX_GNU_RUSTFLAGS="-C target-cpu=skylake"
+
 CPU_FLAGS_X86="aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sse sse2 sse3 sse4_1 sse4_2 ssse3"
 
 USE="X elogind xinerama udev dbus git crypt alc \
      xrandr upower x264 imlib libpng apng postproc \
-     networkmanager usb matroska man jpeg png gif \
+     -networkmanager usb matroska man jpeg png gif \
      ffmpeg encode curl bzip2 savedconfig bash-completion \
      alsa pulseaudio mp3 mp4 vim-syntax pdf latex \
      bluetooth wifi aac \
