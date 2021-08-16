@@ -72,6 +72,15 @@ augroup mySh
   au FileType sh setlocal softtabstop=2
 augroup END
 
+" ----- au MD ---------------------------------------------------------------
+augroup LaTeX
+  au!
+  au FileType tex setlocal shiftwidth=2
+  au FileType tex setlocal tabstop=4
+  au FileType tex setlocal noexpandtab
+  au FileType tex setlocal listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+augroup END
+
 " ----- C -------------------------------------------------------------------
 augroup myC
   au!
