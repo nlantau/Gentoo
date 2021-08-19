@@ -127,3 +127,6 @@ app-editors/vim vim-with-x
 # required by dev-util/idea-ultimate-2021.1.3::bombo82
 # required by idea-ultimate (argument)
 >=sys-devel/clang-12.0.1 xml
+# required by dev-embedded/arduino-1.8.13::gentoo
+# required by dev-embedded/arduino (argument)
+>=dev-util/astyle-3.1-r2 java

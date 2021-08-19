@@ -18,6 +18,11 @@ app-text/tree
 app-text/xournal
 app-text/zathura
 app-text/zathura-pdf-mupdf
+cross-avr/avr-libc
+cross-avr/binutils
+cross-avr/gcc
+dev-embedded/arduino
+dev-lang/go
 dev-lang/rust
 dev-python/PyQt5
 dev-python/ipython
@@ -51,6 +56,7 @@ sys-apps/lshw
 sys-apps/pciutils
 sys-apps/usbutils
 sys-boot/grub:2
+sys-devel/crossdev
 sys-fs/dosfstools
 sys-fs/xfsprogs
 sys-kernel/genkernel
