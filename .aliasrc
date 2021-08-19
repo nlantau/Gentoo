@@ -60,10 +60,13 @@ function dc() {
   dotfiles commit -m "${@:-update}";
 }
 
+function gc() {
+  git commit -m "${@:-update}";
+}
+
 # Git - General
 alias gad="git add -u"
 alias gs="git status"
-alias gc="git commit -m \"minor changes\""
 alias gp="git push"
 alias gco="git checkout"
 
