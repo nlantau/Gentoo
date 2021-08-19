@@ -48,6 +48,7 @@ net-analyzer/nmap
 net-im/discord-bin
 net-misc/dhcpcd
 net-misc/dropbox
+net-misc/dropbox-cli
 net-misc/netifrc
 net-misc/networkmanager
 sys-apps/bat
