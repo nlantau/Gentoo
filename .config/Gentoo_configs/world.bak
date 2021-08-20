@@ -30,6 +30,7 @@ dev-python/pip
 dev-ruby/sync
 dev-texlive/texlive-langeuropean
 dev-util/idea-ultimate
+mail-client/mutt
 media-fonts/dejavu
 media-fonts/fontawesome
 media-fonts/liberation-fonts
