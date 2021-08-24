@@ -1,0 +1,16 @@
+#!/bin/sh
+# nlantau, 2021-08-24
+
+export DISPLAY=:0.0
+export XAUTHORITY=$HOME/.Xauthority
+
+path="$HOME/Bilder/bg/"
+tod=` date +%X | cut -d ':' -f 1`
+
+if (( $tod >= 20 )) || (( $tod <= 8 ));  then
+  feh --bg-scale $path/g1.png
+  echo "hello"
+else
+  feh --bg-scale $path/g2.jpg
+fi
+
