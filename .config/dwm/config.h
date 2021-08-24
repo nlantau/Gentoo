@@ -100,6 +100,7 @@ static const char *enabledualmonitors[]  = { "/home/nlantau/.config/scripts/moni
 static const char *enabletriplemonitors[]  = { "/home/nlantau/.config/scripts/monitors","triple", NULL };
 static const char *disabledualmonitors[]  = { "/home/nlantau/.config/scripts/monitors","laptop", NULL };
 static const char *locker[] = {"slock", NULL};
+static const char *bgchanger[] = {"/home/nlantau/.config/scripts/bg_switcher", NULL};
 
 /* Sound */
 static const char *mutecmd[] = { "/usr/bin/pactl","set-sink-mute","0","toggle", NULL };
@@ -125,6 +126,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_z,      spawn,          {.v = locker } },
         { MODALT|ShiftMask,             XK_x,      spawn,          {.v = susp } },         
+        { MODALT|ShiftMask,             XK_b,      spawn,          {.v = bgchanger } },         
 
         /* Spawn cmd                                                        */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },

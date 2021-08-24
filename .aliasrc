@@ -32,8 +32,8 @@ alias sa="cd $SCHOOLDIR"
 alias b="bluetoothctl"
 
 # Current courses
-alias c1="cd $SCHOOLDIR/S_Utmanande_Matematik"
-alias c2="cd $SCHOOLDIR/8_FY263A_VT21_Sensor_Technology_for_Embedded_Systems"
+alias c1="cd $SCHOOLDIR/../3_TA/"
+alias c2="cd $SCHOOLDIR/"
 
 # Grep
 alias grep="grep ${colorflag}"
