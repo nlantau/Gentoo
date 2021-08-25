@@ -30,6 +30,7 @@ dev-python/pip
 dev-ruby/sync
 dev-texlive/texlive-langeuropean
 dev-util/idea-ultimate
+dev-util/nvidia-cuda-toolkit
 mail-client/mutt
 media-fonts/dejavu
 media-fonts/fontawesome
@@ -78,6 +79,7 @@ x11-apps/xmag
 x11-apps/xrandr
 x11-apps/xset
 x11-base/xorg-server
+x11-drivers/nvidia-drivers
 x11-drivers/xf86-video-intel
 x11-misc/dmenu
 x11-misc/dunst
