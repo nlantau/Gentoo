@@ -14,7 +14,7 @@ CPU_FLAGS_X86="aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sse sse2 s
 
 USE="X elogind xinerama udev dbus git crypt alc \
      xrandr upower x264 imlib libpng apng postproc \
-     -networkmanager usb matroska man jpeg png gif \
+     -networkmanager nvidia tools usb matroska man jpeg png gif \
      ffmpeg encode curl bzip2 savedconfig bash-completion \
      alsa pulseaudio mp3 mp4 vim-syntax pdf latex \
      bluetooth wifi aac \

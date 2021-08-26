@@ -1,0 +1,29 @@
+#!/bin/sh
+# nlantau, 2021-08-26
+
+#######################################
+#
+#  Mount LFS and Fedora prior to
+#  updating bootloader
+#  => os-prober finds all kernels
+#
+#######################################
+
+
+lfs=/dev/nvme0n1p4
+fed=/dev/nvme0n1p5
+
+function mount_() {
+  { [[ `lsblk -f | awk '/nvme0n1p4/ {print $7}'` = /mnt/lfs ]] || sudo mount $lfs /mnt/lfs ; }
+  { [[ `lsblk -f | awk '/nvme0n1p5/ {print $7}'` = /mnt/fedora ]] || sudo mount $fed /mnt/fedora ; }
+}
+
+function umount_() {
+  { [[ `lsblk -f | awk '/nvme0n1p4/ {print $7}'` = /mnt/lfs ]] && sudo umount /mnt/lfs ; }
+  { [[ `lsblk -f | awk '/nvme0n1p5/ {print $7}'` = /mnt/fedora ]] && sudo umount /mnt/fedora ; }
+}
+
+{ [[ $1 = "1" ]] && mount_ ; }
+{ [[ $1 = "2" ]] && umount_ ; }
+
+lsblk -f
