@@ -9,16 +9,18 @@
 #
 #######################################
 
-
+boot=/dev/nvme0n1p1
 lfs=/dev/nvme0n1p4
 fed=/dev/nvme0n1p5
 
 function mount_() {
+  { [[ `lsblk -f | awk '/nvme0n1p1/ {print $7}'` = /boot ]] || sudo mount $boot /boot ; }
   { [[ `lsblk -f | awk '/nvme0n1p4/ {print $7}'` = /mnt/lfs ]] || sudo mount $lfs /mnt/lfs ; }
   { [[ `lsblk -f | awk '/nvme0n1p5/ {print $7}'` = /mnt/fedora ]] || sudo mount $fed /mnt/fedora ; }
 }
 
 function umount_() {
+  { [[ `lsblk -f | awk '/nvme0n1p1/ {print $7}'` = /boot ]] && sudo umount /boot ; }
   { [[ `lsblk -f | awk '/nvme0n1p4/ {print $7}'` = /mnt/lfs ]] && sudo umount /mnt/lfs ; }
   { [[ `lsblk -f | awk '/nvme0n1p5/ {print $7}'` = /mnt/fedora ]] && sudo umount /mnt/fedora ; }
 }
