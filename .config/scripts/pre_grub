@@ -27,5 +27,6 @@ function umount_() {
 
 { [[ $1 = "1" ]] && mount_ ; }
 { [[ $1 = "2" ]] && umount_ ; }
+{ [[ $1 = "3" ]] && sudo sed -i 's/root=\/dev\/nvme0n1p5/root=\/dev\/nvme0n1p5 rd.driver.blacklist=nouveau/g' /boot/grub/grub.cfg ; }
 
 lsblk -f
