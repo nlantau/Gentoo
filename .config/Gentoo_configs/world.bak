@@ -59,6 +59,7 @@ sys-apps/lshw
 sys-apps/pciutils
 sys-apps/usbutils
 sys-boot/grub:2
+sys-boot/os-prober
 sys-devel/crossdev
 sys-fs/dosfstools
 sys-fs/xfsprogs

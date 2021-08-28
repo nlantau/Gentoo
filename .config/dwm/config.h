@@ -88,12 +88,11 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "alacritty", "-e", "tmux", NULL };
 
 /* Applications */
 static const char *intellij[]  = { "idea-ultimate", NULL };
 static const char *flame[]  = { "flameshot","gui", NULL };
-static const char *spotify[] = {"spotifyterm", NULL};
 
 /* Monitors */
 static const char *enabledualmonitors[]  = { "/home/nlantau/.config/scripts/monitors","dual", NULL };
@@ -173,7 +172,6 @@ static Key keys[] = {
         { MODALT|ShiftMask,             XK_p,      spawn,          {.v = flame } },         
         { MODALT,                       XK_l,      spawn,          {.v = brlowcmd } },
         { MODALT|ShiftMask,             XK_j,      spawn,          {.v = intellij } },
-        //{ MODALT|ShiftMask,             XK_m,      spawn,          {.v = spotify } },
 
         /* XF86                                                             */
         { 0,                            XF86XK_AudioMute,          spawn, {.v = mutecmd } },
