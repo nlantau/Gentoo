@@ -18,6 +18,11 @@ LF_CONF="${PDIR}/savedconfig/sys-kernel/linux-firmware"
 MAKE_CONF="${PDIR}/make.conf"
 LAYMAN_CONF="${PDIR}/repos.conf/layman.conf"
 
+sudo -u nlantau /usr/bin/git --git-dir=/home/nlantau/.dotfile/ \
+  --work-tree=/home/nlantau add /home/nlantau/.config/Gentoo_configs || \
+  echo "Could not add Gentoo_configs too dotfiles"
+
+
 { cp ${PUSE} ${BDIR}/local.bak && \
 cp ${LF_CONF} ${BDIR}/linux-firmware.bak && \
 cp ${MAKE_CONF} ${BDIR}/make.conf.bak && \

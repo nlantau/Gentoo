@@ -7,6 +7,7 @@ app-misc/cmatrix
 app-misc/neofetch
 app-misc/ranger
 app-misc/tmux
+app-office/libreoffice
 app-portage/cpuid2cpuflags
 app-portage/eix
 app-portage/genlop
@@ -46,6 +47,8 @@ media-sound/alsa-utils
 media-sound/pavucontrol
 media-sound/pulseaudio
 media-sound/spotify
+media-video/obs-studio
+media-video/vlc
 net-analyzer/nmap
 net-im/discord-bin
 net-im/zoom

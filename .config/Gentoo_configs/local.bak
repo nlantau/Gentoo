@@ -133,3 +133,6 @@ app-editors/vim vim-with-x
 # required by sys-boot/os-prober-1.78::gentoo
 # required by sys-boot/os-prober (argument)
 >=sys-boot/grub-2.06 mount
+# required by app-office/libreoffice-7.1.5.2::gentoo
+# required by app-office/libreoffice (argument)
+>=dev-libs/xmlsec-1.2.32 nss
