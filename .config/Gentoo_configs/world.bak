@@ -48,6 +48,7 @@ media-sound/pulseaudio
 media-sound/spotify
 net-analyzer/nmap
 net-im/discord-bin
+net-im/zoom
 net-misc/dhcpcd
 net-misc/dropbox
 net-misc/dropbox-cli

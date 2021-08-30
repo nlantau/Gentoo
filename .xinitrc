@@ -5,7 +5,7 @@ xset -dpms &
 
 setxkbmap se &
 
-feh --bg-scale /home/nlantau/Bilder/gt_2.jpg
+feh --bg-scale /home/nlantau/Bilder/bg/g2.jpg
 
 unclutter -idle 3 &
 
