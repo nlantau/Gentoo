@@ -1,0 +1,14 @@
+#!/bin/sh
+# nlantau, 2021-09-02
+
+if [[ $1 == "space" ]]; then
+  for f in *; do
+    mv -v "$f" "${f// /-}"
+  done
+elif [[ $1 == "non-ascii" ]]; then
+  for f in $(ls | grep -P '[^\1-\177]'); do
+    rm -iv "$f"
+  done
+else
+  echo "use \"space\" or \"non-ascii\""
+fi
