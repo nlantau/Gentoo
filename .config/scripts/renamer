@@ -1,14 +1,17 @@
 #!/bin/sh
 # nlantau, 2021-09-02
 
-if [[ $1 == "space" ]]; then
+x=${2:- }
+y=${3:- }
+
+if [[ $1 == "s" ]]; then
   for f in *; do
-    mv -v "$f" "${f// /-}"
+    mv -v "$f" "${f//$x/$y}"
   done
-elif [[ $1 == "non-ascii" ]]; then
+elif [[ $1 == "na" ]]; then
   for f in $(ls | grep -P '[^\1-\177]'); do
     rm -iv "$f"
   done
 else
-  echo "use \"space\" or \"non-ascii\""
+  echo "use: \"renamer s ' ' '.'\" to change space -> dot, or \"na\" to rm file with non ascii characters"
 fi
