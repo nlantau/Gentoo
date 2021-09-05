@@ -97,6 +97,7 @@ static const char *flame[]  = { "flameshot","gui", NULL };
 /* Monitors */
 static const char *enabledualmonitors[]  = { "/home/nlantau/.config/scripts/monitors","dual", NULL };
 static const char *enabletriplemonitors[]  = { "/home/nlantau/.config/scripts/monitors","triple", NULL };
+static const char *enablelaptopHDMImonitors[]  = { "/home/nlantau/.config/scripts/monitors","laptop-hdmi", NULL };
 static const char *disabledualmonitors[]  = { "/home/nlantau/.config/scripts/monitors","laptop", NULL };
 static const char *locker[] = {"slock", NULL};
 static const char *bgchanger[] = {"/home/nlantau/.config/scripts/bg_switcher", NULL};
@@ -169,6 +170,7 @@ static Key keys[] = {
         { MODALT|ShiftMask,             XK_s,      spawn,          {.v = disabledualmonitors } },         
         { MODALT|ShiftMask,             XK_d,      spawn,          {.v = enabledualmonitors } },         
         { MODALT|ShiftMask,             XK_t,      spawn,          {.v = enabletriplemonitors } },         
+        { MODALT|ShiftMask,             XK_h,      spawn,          {.v = enablelaptopHDMImonitors } },         
         { MODALT|ShiftMask,             XK_p,      spawn,          {.v = flame } },         
         { MODALT,                       XK_l,      spawn,          {.v = brlowcmd } },
         { MODALT|ShiftMask,             XK_j,      spawn,          {.v = intellij } },

@@ -32,6 +32,13 @@ function setting_triple {
     [[ $? -eq 0 ]] || notify-send "Not Connected"
 }
 
+function setting_dual_laptop_and_HDMI { 
+  xrandr --output \
+    $M1 --mode 1920x1080 --output \
+    $M3 --mode 1920x1080 --same-as $M1 >/dev/null 2>&1
+    [[ $? -eq 0 ]] || notify-send "Not Connected"
+}
+
 function keyrepeat_xcape {
   # key rate, replay
   xset r rate 300 50 || notify-send "xset rate error"
@@ -58,6 +65,10 @@ case "$1" in
     ;;
   "triple")
     setting_triple ;
+    keyrepeat_xcape ;
+    ;;
+  "laptop-hdmi")
+    setting_dual_laptop_and_HDMI ;
     keyrepeat_xcape ;
     ;;
   *)
