@@ -65,6 +65,7 @@ sys-apps/usbutils
 sys-boot/grub:2
 sys-boot/os-prober
 sys-devel/crossdev
+sys-devel/gdb
 sys-fs/dosfstools
 sys-fs/xfsprogs
 sys-kernel/genkernel
