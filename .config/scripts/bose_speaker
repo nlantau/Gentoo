@@ -16,7 +16,8 @@ while getopts "hcdi" o; do case "${o}" in
 esac done
 
 # Demand flag usage
-[[ -z $connect && -z $disconnect && -z $stat ]] && { printf "\n > Invalid option. See \"-h\" for help\n\n" && exit 1 ; }
+[[ -z $connect && -z $disconnect && -z $stat ]] && \
+  { printf "\n > Invalid option. See \"-h\" for help\n\n" && exit 1 ; }
 
 # Check if rc-service is started
 rc_serv=$(rc-service bluetooth status | grep -o started)
