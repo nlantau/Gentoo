@@ -6,6 +6,7 @@ app-editors/vscodium
 app-misc/cmatrix
 app-misc/neofetch
 app-misc/ranger
+app-misc/screen
 app-misc/tmux
 app-office/libreoffice
 app-portage/cpuid2cpuflags
