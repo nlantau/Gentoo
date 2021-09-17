@@ -114,6 +114,7 @@ static const char *miccmd[] = { "/usr/bin/pactl","set-source-mute","@DEFAULT_SOU
 static const char *brupcmd[] = { "sudo", "xbacklight", "-inc", "1", NULL };
 static const char *brdowncmd[] = { "sudo", "xbacklight", "-dec", "1", NULL };
 static const char *brlowcmd[] = { "sudo", "xbacklight", "-set", "1", NULL };
+static const char *brdaycmd[] = { "sudo", "xbacklight", "-set", "50", NULL };
 
 /* Power */
 static const char *susp[] = {"/home/nlantau/.config/scripts/susp_lock",NULL};
@@ -180,6 +181,7 @@ static Key keys[] = {
         { MODALT|ShiftMask,             XK_h,      spawn,          {.v = enablelaptopHDMImonitors } },         
         { MODALT|ShiftMask,             XK_p,      spawn,          {.v = flame } },         
         { MODALT,                       XK_l,      spawn,          {.v = brlowcmd } },
+        { MODALT,                       XK_d,      spawn,          {.v = brdaycmd } },
         { MODALT|ShiftMask,             XK_j,      spawn,          {.v = intellij } },
 
         /* XF86                                                             */
