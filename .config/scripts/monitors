@@ -15,11 +15,16 @@ function setting_laptop {
 }
 
 function setting_dual { 
+  #xrandr --output \
+    #$M1 --mode 1920x1080 --output \
+    #$M3 --mode 1920x1080 --right-of $M1 >/dev/null 2>&1
+    #[[ $? -eq 0 ]] || notify-send "Not Connected"
   xrandr --output \
     $M1 --off --output \
     $M3 --mode 1920x1080 --output \
+    $M1 --off --output \
+    $M3 --mode 1920x1080 --output \
     $M2 --mode 1920x1080 --right-of $M3 >/dev/null 2>&1
-    [[ $? -eq 0 ]] || notify-send "Not Connected"
 }
 
 function setting_triple {  
