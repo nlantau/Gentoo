@@ -26,8 +26,8 @@ sudo -u nlantau /usr/bin/git --git-dir=/home/nlantau/.dotfile/ \
   --work-tree=/home/nlantau add /home/nlantau/.config/scripts/log_data/ || \
   echo "Could not add log_data/ too dotfiles"
 
+#cp ${LF_CONF} ${BDIR}/linux-firmware.bak && \
 { cp ${PUSE} ${BDIR}/local.bak && \
-cp ${LF_CONF} ${BDIR}/linux-firmware.bak && \
 cp ${MAKE_CONF} ${BDIR}/make.conf.bak && \
 cp ${LAYMAN_CONF} ${BDIR}/layman.conf.bak && \
 cp ${KERNEL} ${BDIR}/`uname -r`.config && \
