@@ -26,7 +26,7 @@ MAKEOPTS="-j12"
 #EMERGE_DEFAULT_OPTS="--jobs 4 --load-average 2.7"
 
 VIDEO_CARDS="intel i965 iris nvidia"
-INPUT_DEVICES="libinput synaptics"
+INPUT_DEVICES="libinput synaptics wacom"
 
 ACCEPT_LICENSE="*"
 ACCEPT_KEYWORDS="~amd64"
