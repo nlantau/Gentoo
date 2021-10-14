@@ -68,6 +68,7 @@ case "$1" in
     keyrepeat_xcape ;
     ;;
   "dual")
+    # setting_dual_school ;
     setting_dual ;
     keyrepeat_xcape ;
     ;;
