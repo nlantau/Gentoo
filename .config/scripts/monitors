@@ -28,6 +28,7 @@ function setting_dual {
     $M1 --off --output \
     $M3 --mode 1920x1080 --output \
     $M2 --mode 1920x1080 --right-of $M3 >/dev/null 2>&1
+    [[ $? -eq 0 ]] || notify-send "Not Connected"
 }
 
 function setting_triple {  
