@@ -136,3 +136,20 @@ app-editors/vim vim-with-x
 # required by app-office/libreoffice-7.1.5.2::gentoo
 # required by app-office/libreoffice (argument)
 >=dev-libs/xmlsec-1.2.32 nss
+# required by dev-python/matplotlib-3.4.3-r1::gentoo[-test]
+# required by dev-python/matplotlib-inline-0.1.3::gentoo
+# required by dev-python/ipykernel-6.2.0::gentoo[-test]
+# required by dev-python/ipyparallel-6.3.0-r1::gentoo[-test]
+# required by dev-python/ipython-7.28.0::gentoo[smp]
+# required by @selected
+# required by @world (argument)
+>=virtual/imagemagick-tools-0 tiff
+# required by virtual/imagemagick-tools-0::gentoo
+# required by dev-python/matplotlib-3.4.3-r1::gentoo[-test]
+# required by dev-python/matplotlib-inline-0.1.3::gentoo
+# required by dev-python/ipykernel-6.2.0::gentoo[-test]
+# required by dev-python/ipyparallel-6.3.0-r1::gentoo[-test]
+# required by dev-python/ipython-7.28.0::gentoo[smp]
+# required by @selected
+# required by @world (argument)
+>=media-gfx/imagemagick-7.1.0.6 tiff
