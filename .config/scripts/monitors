@@ -35,7 +35,7 @@ function setting_triple {
   # Modified to be used during labs in school
   xrandr --output \
     $M1 --mode 1920x1080 --output \
-    $M3 --mode 1920x1080 --right-of \
+    $M3 --mode 1920x1080 --rotate right --right-of \
     $M1 --output \
     $M2 --mode 1920x1080 --right-of $M3 >/dev/null 2>&1
     [[ $? -eq 0 ]] || notify-send "Not Connected"
