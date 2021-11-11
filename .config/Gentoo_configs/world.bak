@@ -3,6 +3,8 @@ app-admin/sysklogd
 app-editors/vim
 app-editors/vscode
 app-editors/vscodium
+app-emulation/docker
+app-emulation/nvidia-container-toolkit
 app-misc/cmatrix
 app-misc/neofetch
 app-misc/ranger
@@ -25,6 +27,7 @@ cross-avr/avr-libc
 cross-avr/binutils
 cross-avr/gcc
 dev-embedded/arduino
+dev-java/openjdk
 dev-lang/go
 dev-lang/rust
 dev-python/PyQt5

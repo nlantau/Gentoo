@@ -9,6 +9,15 @@ alias vim="$EDITOR"
 alias vi="$EDITOR"
 alias v="$EDITOR"
 
+# Docker
+# alias ml="sudo docker run --gpus all -it --rm -e JUPYTER_ENABLE_LAB=yes -v $(pwd):/tf/notebooks -p 8888:8888 tensorflow/tensorflow:latest-gpu-jupyter"
+
+function ml() {
+  docker run --gpus all --rm -it -p 8888:8888 -v /home/nlantau/Github/DT374BHT21/:/home/joyvan/work -e GRANT_SUDO=yes -e JUPYTER_ENABLE_LAB=yes nlantau/ml4 jupyter-lab
+  # docker run --gpus all -it --rm -v /home/nlantau/Github:/tf/notebooks -p 8888:8888 nlantau/ml3
+}
+
+
 # Editor commands
 alias vn="$EDITOR $MYVIMRC"
 alias ve="$EDITOR $HOME/.bashenv"

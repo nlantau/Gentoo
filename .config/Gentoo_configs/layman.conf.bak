@@ -22,3 +22,11 @@ sync-type = laymansync
 sync-uri = https://github.com/bombo82/bombo82-overlay.git
 auto-sync = Yes
 
+[vowstar]
+priority = 50
+location = /var/lib/layman/vowstar
+layman-type = git
+sync-type = laymansync
+sync-uri = https://github.com/vowstar/vowstar-overlay.git
+auto-sync = Yes
+

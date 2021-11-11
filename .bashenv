@@ -38,3 +38,5 @@ export PS1='\[\e[0m\]\$\[\e[0;92m\]_ \[\e[0;38;5;31m\]\W\[\e[0;38;5;160m\] $(git
 
 # LFS
 export LFS=/mnt/lfs
+
+export FORMAT="\nID\t{{.ID}}\nIMAGE\t{{.Image}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.RunningFor}}\nSTATUS\t{{.Status}}\nPORTS\t{{.Ports}}\nNAMES\t{{.Names}}\n"
