@@ -14,8 +14,12 @@ alias v="$EDITOR"
 
 function ml() {
   #docker run --gpus all --rm -it -p 8888:8888 -v /home/nlantau/Github/DT374BHT21/:/home/joyvan/work -e GRANT_SUDO=yes -e JUPYTER_ENABLE_LAB=yes nlantau/ml4 jupyter-lab
-  docker run --gpus all -it --rm -v /home/nlantau/Github:/tf/notebooks -p 8888:8888 nlantau/ml3
+  docker run --gpus all -it --rm -v "${@:-/home/nlantau/Github}":/tf/notebooks -p 8888:8888 nlantau/ml3
 }
+
+# Java
+alias javac="$HOME/.jdks/openjdk-17.0.1/bin/javac"
+alias java="$HOME/.jdks/openjdk-17.0.1/bin/java"
 
 
 # Editor commands
