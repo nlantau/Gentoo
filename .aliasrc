@@ -17,6 +17,10 @@ function ml() {
   docker run --gpus all -it --rm -v "${@:-/home/nlantau/Github}":/tf/notebooks -p 8888:8888 nlantau/ml3
 }
 
+function winzip() {
+  zip -9 -y -r -q $1.zip $2
+}
+
 # Java
 alias javac="$HOME/.jdks/openjdk-17.0.1/bin/javac"
 alias java="$HOME/.jdks/openjdk-17.0.1/bin/java"
