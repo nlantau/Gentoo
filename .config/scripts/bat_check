@@ -5,4 +5,4 @@ export XAUTHORITY=/home/nlantau/.Xauthority
 
 bat_perc=$(cat /sys/class/power_supply/BAT0/capacity)
 
-[[ $bat_perc -le 60 ]] && notify-send "Critical battery level: $bat_perc"
+[[ $bat_perc -le 20 ]] && notify-send "Critical battery level: $bat_perc"
