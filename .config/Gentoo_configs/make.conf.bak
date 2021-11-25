@@ -17,7 +17,7 @@ USE="X elogind xinerama udev dbus git crypt alc \
      -networkmanager nvidia tools usb matroska man jpeg png gif \
      ffmpeg encode curl bzip2 savedconfig bash-completion \
      alsa pulseaudio mp3 mp4 vim-syntax pdf latex \
-     bluetooth wifi aac \
+     bluetooth wifi aac clippy rls rust-src rustfmt\
      -gnome -gtk -kde -plasma -ios -ipod -emacs -xemacs \
      -dvd -dvdr -dv -coreaudio -scanner -a52 \
      -systemd -aqua -css -cups"
