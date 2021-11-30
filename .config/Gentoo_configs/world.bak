@@ -37,7 +37,6 @@ dev-ruby/sync
 dev-texlive/texlive-langeuropean
 dev-util/idea-ultimate
 dev-util/nvidia-cuda-toolkit
-dev-util/rustup
 mail-client/mutt
 media-fonts/dejavu
 media-fonts/fontawesome

@@ -42,6 +42,7 @@ pathprepend() {
 }
 
 pathappend $HOME/.config/scripts $HOME/.local/bin /usr/local
+pathprepend $HOME/.cargo/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -59,3 +60,4 @@ unset __conda_setup
 conda deactivate
 # <<< conda initialize <<<
 
+. "$HOME/.cargo/env"
