@@ -153,3 +153,7 @@ app-editors/vim vim-with-x
 # required by @selected
 # required by @world (argument)
 >=media-gfx/imagemagick-7.1.0.6 tiff
+# required by net-im/discord-bin-0.0.16-r4::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-libs/glibc-2.34-r3 -clone3

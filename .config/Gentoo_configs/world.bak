@@ -85,6 +85,7 @@ sys-process/lsof
 www-client/firefox
 x11-apps/mesa-progs
 x11-apps/setxkbmap
+x11-apps/xev
 x11-apps/xinput
 x11-apps/xmag
 x11-apps/xrandr
@@ -94,6 +95,7 @@ x11-drivers/nvidia-drivers
 x11-drivers/xf86-video-intel
 x11-misc/dmenu
 x11-misc/dunst
+x11-misc/screenkey
 x11-misc/unclutter
 x11-misc/xclip
 x11-terms/alacritty
