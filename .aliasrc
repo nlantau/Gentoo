@@ -12,6 +12,12 @@ alias v="$EDITOR"
 # Docker
 # alias ml="sudo docker run --gpus all -it --rm -e JUPYTER_ENABLE_LAB=yes -v $(pwd):/tf/notebooks -p 8888:8888 tensorflow/tensorflow:latest-gpu-jupyter"
 
+function grepper() {
+  [[ -z $1 ]] && (echo "Use args"; exit -1)
+
+  find . -iname '*.pdf' -exec pdfgrep -n -i -e "$1" {} +
+}
+
 function ml() {
   #docker run --gpus all --rm -it -p 8888:8888 -v /home/nlantau/Github/DT374BHT21/:/home/joyvan/work -e GRANT_SUDO=yes -e JUPYTER_ENABLE_LAB=yes nlantau/ml4 jupyter-lab
   docker run --gpus all -it --rm -v "${@:-/home/nlantau/Github}":/tf/notebooks -p 8888:8888 nlantau/ml3

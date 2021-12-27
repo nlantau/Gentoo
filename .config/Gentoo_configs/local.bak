@@ -157,3 +157,6 @@ app-editors/vim vim-with-x
 # required by @selected
 # required by @world (argument)
 >=sys-libs/glibc-2.34-r3 -clone3
+# required by media-gfx/gimp-2.10.28-r1::gentoo
+# required by media-gfx/gimp (argument)
+>=media-libs/gegl-0.4.32 cairo

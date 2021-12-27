@@ -30,3 +30,11 @@ sync-type = laymansync
 sync-uri = https://github.com/vowstar/vowstar-overlay.git
 auto-sync = Yes
 
+[gig]
+priority = 50
+location = /var/lib/layman/gig
+layman-type = git
+sync-type = laymansync
+sync-uri = https://github.com/Gig-OS/gig.git
+auto-sync = Yes
+

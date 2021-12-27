@@ -28,6 +28,7 @@ cross-avr/binutils
 cross-avr/gcc
 dev-embedded/arduino
 dev-java/openjdk
+dev-lang/ghc
 dev-lang/go
 dev-lang/rust
 dev-python/PyQt5
@@ -35,6 +36,7 @@ dev-python/ipython
 dev-python/pip
 dev-ruby/sync
 dev-texlive/texlive-langeuropean
+dev-util/StarUML
 dev-util/idea-ultimate
 dev-util/nvidia-cuda-toolkit
 mail-client/mutt
@@ -45,6 +47,7 @@ media-fonts/noto-emoji
 media-fonts/powerline-symbols
 media-gfx/feh
 media-gfx/flameshot
+media-gfx/gimp
 media-gfx/ueberzug
 media-gfx/xpaint
 media-libs/alsa-lib
