@@ -1,9 +1,9 @@
 app-admin/sudo
 app-admin/sysklogd
+app-containers/docker
 app-editors/vim
 app-editors/vscode
 app-editors/vscodium
-app-emulation/docker
 app-emulation/nvidia-container-toolkit
 app-misc/cmatrix
 app-misc/neofetch
