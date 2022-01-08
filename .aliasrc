@@ -9,8 +9,9 @@ alias vim="$EDITOR"
 alias vi="$EDITOR"
 alias v="$EDITOR"
 
-# Docker
-# alias ml="sudo docker run --gpus all -it --rm -e JUPYTER_ENABLE_LAB=yes -v $(pwd):/tf/notebooks -p 8888:8888 tensorflow/tensorflow:latest-gpu-jupyter"
+function wac() {
+  xsetwacom set "Wacom Intuos BT S Pen stylus" MapToOutput DP1
+}
 
 function grepper() {
   [[ -z $1 ]] && (echo "Use args"; exit -1)
