@@ -66,6 +66,7 @@ net-misc/dropbox-cli
 net-misc/netifrc
 net-misc/networkmanager
 sys-apps/bat
+sys-apps/exa
 sys-apps/lm-sensors
 sys-apps/lshw
 sys-apps/pciutils
