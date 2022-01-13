@@ -13,6 +13,10 @@ function wac() {
   xsetwacom set "Wacom Intuos BT S Pen stylus" MapToOutput DP1
 }
 
+function lat() {
+  latex main.tex && bibtex main.aux && latex main.tex && pdflatex main.tex
+}
+
 function grepper() {
   [[ -z $1 ]] && (echo "Use args"; exit -1)
 
