@@ -115,8 +115,8 @@ nnoremap <Leader><ESC> :noh<CR><ESC>
 nnoremap <Leader><Leader> :w<CR>
 
 " ----- Save And Compile pdf  -----------------------------------------
-"nnoremap <C-r>l :w<CR>:!pdflatex %<Enter><CR>
-nnoremap <C-r>l :w<CR>:!latex main && bibtex main && latex main && pdflatex main<Enter><CR>
+nnoremap <C-r>l :w<CR>:!pdflatex %<Enter><CR>
+"nnoremap <C-r>l :w<CR>:!latex main && bibtex main && latex main && pdflatex main<Enter><CR>
 
 " ----- xor list ------------------------------------------------------
 nnoremap <C-r>c :set list!<CR>
