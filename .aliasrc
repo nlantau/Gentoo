@@ -14,7 +14,7 @@ function wac() {
 }
 
 function lat() {
-  latex main.tex && bibtex main.aux && latex main.tex && pdflatex main.tex
+  pdflatex main && bibtex main && pdflatex main && pdflatex main
 }
 
 function grepper() {

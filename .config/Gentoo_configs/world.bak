@@ -36,6 +36,7 @@ dev-python/ipython
 dev-python/pip
 dev-ruby/sync
 dev-texlive/texlive-langeuropean
+dev-texlive/texlive-publishers
 dev-util/StarUML
 dev-util/idea-ultimate
 dev-util/nvidia-cuda-toolkit
