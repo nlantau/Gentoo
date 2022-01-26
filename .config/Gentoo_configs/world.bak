@@ -19,6 +19,7 @@ app-portage/genlop
 app-portage/gentoolkit
 app-portage/layman
 app-portage/ufed
+app-text/pandoc
 app-text/pdfgrep
 app-text/texlive
 app-text/tree
