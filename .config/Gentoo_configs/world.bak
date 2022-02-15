@@ -8,6 +8,7 @@ app-editors/vscodium
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-misc/cmatrix
+app-misc/mosquitto
 app-misc/neofetch
 app-misc/ranger
 app-misc/screen
