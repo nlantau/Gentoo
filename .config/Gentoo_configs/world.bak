@@ -1,5 +1,6 @@
 app-admin/sudo
 app-admin/sysklogd
+app-arch/p7zip
 app-containers/docker
 app-containers/nvidia-container-toolkit
 app-editors/vim
