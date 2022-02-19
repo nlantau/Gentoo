@@ -31,6 +31,7 @@ app-text/zathura-pdf-mupdf
 cross-avr/avr-libc
 cross-avr/binutils
 cross-avr/gcc
+dev-db/mongodb
 dev-embedded/arduino
 dev-java/openjdk
 dev-lang/ghc
