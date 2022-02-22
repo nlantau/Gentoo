@@ -7,7 +7,7 @@ setxkbmap se &
 
 feh --bg-scale /home/nlantau/Bilder/bg/g2.jpg
 
-unclutter -idle 3 &
+unclutter -idle 2 &
 
 exec /home/nlantau/.config/slstatus/slstatus &
 
