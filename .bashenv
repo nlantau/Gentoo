@@ -5,6 +5,10 @@
 export EDITOR="vim"
 export VISUAL="vim"
 
+# ESP
+export PATH="$PATH:$HOME/esp/xtensa-lx106-elf/bin"
+export IDF_PATH="$HOME/esp/ESP8266_RTOS_SDK"
+
 # XDG Base Directory 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"

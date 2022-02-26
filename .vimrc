@@ -81,13 +81,25 @@ augroup LaTeX
   au FileType tex setlocal listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 augroup END
 
-" ----- C -------------------------------------------------------------------
+" ----- C - Kernel ----------------------------------------------------------
+"augroup myC
+  "au!
+  "au BufRead,BufNewFile *.c setfiletype c
+  "au FileType c setlocal shiftwidth=8
+  "au FileType c setlocal tabstop=8
+  "au FileType c setlocal noexpandtab " using TAB, not converting to spaces
+  "au FileType c setlocal listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+  "au FileType c setlocal list
+"augroup END
+
+" ----- C - Kernel ----------------------------------------------------------
+"  :retab <- changes .c-files to spaces
 augroup myC
   au!
   au BufRead,BufNewFile *.c setfiletype c
-  au FileType c setlocal shiftwidth=8
-  au FileType c setlocal tabstop=8
-  au FileType c setlocal noexpandtab " using TAB, not converting to spaces
+  au FileType c setlocal shiftwidth=4
+  au FileType c setlocal tabstop=4
+  au FileType c setlocal expandtab
   au FileType c setlocal listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
   "au FileType c setlocal list
 augroup END
