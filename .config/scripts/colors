@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # nlantau, 2021-05-16
 
 # ANSI colors

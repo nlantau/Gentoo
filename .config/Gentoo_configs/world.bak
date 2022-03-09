@@ -2,6 +2,7 @@ app-admin/sudo
 app-admin/sysklogd
 app-arch/p7zip
 app-containers/docker
+app-containers/docker-compose
 app-containers/nvidia-container-toolkit
 app-editors/vim
 app-editors/vscode
@@ -48,6 +49,7 @@ dev-texlive/texlive-publishers
 dev-util/StarUML
 dev-util/idea-ultimate
 dev-util/nvidia-cuda-toolkit
+dev-util/shellcheck
 mail-client/mutt
 media-fonts/dejavu
 media-fonts/fontawesome
@@ -67,6 +69,7 @@ media-sound/spotify
 media-video/obs-studio
 media-video/vlc
 net-analyzer/nmap
+net-analyzer/wireshark
 net-im/discord-bin
 net-im/zoom
 net-misc/dhcpcd
@@ -74,6 +77,8 @@ net-misc/dropbox
 net-misc/dropbox-cli
 net-misc/netifrc
 net-misc/networkmanager
+net-vpn/openvpn
+net-wireless/aircrack-ng
 sys-apps/bat
 sys-apps/exa
 sys-apps/lm-sensors

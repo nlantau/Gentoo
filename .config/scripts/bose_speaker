@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # nlantau, 2021-05-13
 # updated, 2021-07-06
 
