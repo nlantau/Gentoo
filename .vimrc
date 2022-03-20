@@ -92,7 +92,7 @@ augroup END
   "au FileType c setlocal list
 "augroup END
 
-" ----- C - Kernel ----------------------------------------------------------
+" ----- C -------------------------------------------------------------------
 "  :retab <- changes .c-files to spaces
 augroup myC
   au!
@@ -101,6 +101,17 @@ augroup myC
   au FileType c setlocal tabstop=4
   au FileType c setlocal expandtab
   au FileType c setlocal listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+  "au FileType c setlocal list
+augroup END
+
+" ----- C++ -----------------------------------------------------------------
+augroup myCPP
+  au!
+  au BufRead,BufNewFile *.cpp setfiletype cpp
+  au FileType cpp setlocal shiftwidth=4
+  au FileType cpp setlocal tabstop=4
+  au FileType cpp setlocal expandtab
+  au FileType cpp setlocal listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
   "au FileType c setlocal list
 augroup END
 
