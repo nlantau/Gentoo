@@ -29,6 +29,7 @@ app-text/tree
 app-text/xournal
 app-text/zathura
 app-text/zathura-pdf-mupdf
+app-text/zathura-pdf-poppler
 cross-avr/avr-libc
 cross-avr/binutils
 cross-avr/gcc
