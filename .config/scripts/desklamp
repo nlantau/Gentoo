@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# nlantau, 2022-03-23
+
+CA="/home/nlantau/.config/scripts/ca.crt"
+TOPIC="/topic/qos0"
+
+_lamp_on() {
+  mosquitto_pub -h raspberrypi -p 8883 -t ${TOPIC} -m 1 --cafile ${CA}
+}
+
+_lamp_off() {
+  mosquitto_pub -h raspberrypi -p 8883 -t ${TOPIC} -m 0 --cafile ${CA}
+}
+
+case "$1" in
+  "on")
+    _lamp_on ;
+    ;;
+  "off")
+    _lamp_off ;
+    ;;
+  *)
+    notify-send "Couldn't switch desktop lamp" ;;
+esac
