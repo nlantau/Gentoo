@@ -4,6 +4,7 @@
 M1="eDP1"
 M2="DP1"
 M3="DP3"
+M4="DP1-3"
 
 
 function setting_laptop {
