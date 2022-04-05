@@ -91,6 +91,7 @@ sys-boot/os-prober
 sys-devel/crossdev
 sys-devel/gdb
 sys-fs/dosfstools
+sys-fs/fuse
 sys-fs/xfsprogs
 sys-kernel/genkernel
 sys-kernel/gentoo-sources
