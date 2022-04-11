@@ -80,6 +80,8 @@ net-misc/netifrc
 net-misc/networkmanager
 net-vpn/openvpn
 net-wireless/aircrack-ng
+net-wireless/blueman
+net-wireless/bluez-tools
 sys-apps/bat
 sys-apps/exa
 sys-apps/lm-sensors
