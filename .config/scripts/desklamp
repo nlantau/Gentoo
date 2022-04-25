@@ -5,11 +5,11 @@ CA="/home/nlantau/.config/scripts/ca.crt"
 TOPIC="/topic/qos0"
 
 _lamp_on() {
-  mosquitto_pub -h raspberrypi -p 8883 -t ${TOPIC} -m 1 --cafile ${CA}
+  mosquitto_pub -h raspberrypi -p 1883 -t ${TOPIC} -m 1
 }
 
 _lamp_off() {
-  mosquitto_pub -h raspberrypi -p 8883 -t ${TOPIC} -m 0 --cafile ${CA}
+  mosquitto_pub -h raspberrypi -p 1883 -t ${TOPIC} -m 0
 }
 
 case "$1" in
