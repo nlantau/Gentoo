@@ -18,7 +18,8 @@ function setting_laptop {
 function setting_dual_school { 
   xrandr --output \
     $M1 --mode 1920x1080 --output \
-    $M3 --mode 1920x1080 --right-of $M1 >/dev/null 2>&1
+    $M3 --mode 1920x1080 --left-of $M1 >/dev/null 2>&1
+    #$M3 --mode 1920x1080 --right-of $M1 >/dev/null 2>&1
     [[ $? -eq 0 ]] || notify-send "Not Connected"
 }
 

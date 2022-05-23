@@ -197,3 +197,6 @@ app-editors/vim vim-with-x
 # required by net-wireless/aircrack-ng-1.6_p20200722-r1::gentoo[airdrop-ng]
 # required by aircrack-ng (argument)
 >=net-wireless/lorcon-2020.06.06_p20220216 python
+# required by net-wireless/kismet-2022.02.1::gentoo
+# required by net-wireless/kismet (argument)
+>=net-libs/libwebsockets-4.3.1 client
