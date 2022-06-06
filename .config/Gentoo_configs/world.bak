@@ -43,6 +43,7 @@ dev-python/PyQt5
 dev-python/ipython
 dev-python/pip
 dev-python/pyserial
+dev-qt/designer
 dev-ruby/sync
 dev-tex/biblatex
 dev-texlive/texlive-langeuropean
