@@ -39,6 +39,7 @@ dev-lang/ghc
 dev-lang/go
 dev-lang/rust
 dev-libs/boost
+dev-libs/criterion
 dev-python/PyQt5
 dev-python/ipython
 dev-python/pip
@@ -52,6 +53,7 @@ dev-util/StarUML
 dev-util/idea-ultimate
 dev-util/nvidia-cuda-toolkit
 dev-util/shellcheck
+dev-util/valgrind
 mail-client/mutt
 media-fonts/dejavu
 media-fonts/fontawesome
